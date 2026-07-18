@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Pastel a sus Pasteles</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+        img { max-width: 300px; }
+    </style>
+</head>
+<body>
+    <h1>Bienvenido a Pastel a sus Pasteles</h1>
+    <p>Preparados con amor y dedicación.</p>
+    <!-- Asegúrate de tener tu imagen en esta misma carpeta y cambia el nombre abajo -->
+    <img src="tu-imagen.png" alt="Pastel artesanal">
+</body>
+</html>
