@@ -2,16 +2,349 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Pastel a sus Pasteles</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastel a sus Pasteles | Pastelería Artesanal y Natural</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
-        img { max-width: 300px; }
+        /* Estilos Base y Paleta de Colores Natural/Ambientalista */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Georgia, Cambria, sans-serif;
+        }
+
+        body {
+            background-color: #f7f5f0; /* Crema suave natural */
+            color: #2c3e2b; /* Verde pino oscuro */
+        }
+
+        /* Hero Section - Portada con imagen automática de harinas y herramientas de repostería */
+        .hero {
+            text-align: center;
+            padding: 120px 20px;
+            background: linear-gradient(rgba(247, 245, 240, 0.85), rgba(247, 245, 240, 0.85)), 
+                        url('https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&q=80&w=1600') no-repeat center/cover;
+            border-bottom: 3px solid #a3b19b;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            color: #4f6f52; /* Verde salvia */
+            font-family: 'Georgia', serif;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #739072;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #4f6f52;
+            color: #f7f5f0;
+            padding: 14px 35px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1rem;
+            box-shadow: 0 4px 10px rgba(79, 111, 82, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #3a533c;
+            transform: translateY(-2px);
+        }
+
+        /* Sección Quiénes Somos */
+        .quienes-somos {
+            max-width: 900px;
+            margin: 60px auto 30px auto;
+            padding: 40px 30px;
+            background-color: #ffffff;
+            border-radius: 20px;
+            border-left: 6px solid #86a789;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.02);
+            text-align: center;
+        }
+
+        .quienes-somos h2 {
+            font-family: 'Georgia', serif;
+            color: #4f6f52;
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+        }
+
+        .quienes-somos p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #3a4d39;
+            margin-bottom: 20px;
+        }
+
+        /* Nueva Sección del Video - Preguntas Frecuentes */
+        .video-seccion {
+            max-width: 800px;
+            margin: 40px auto 70px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .video-seccion h2 {
+            font-family: 'Georgia', serif;
+            color: #4f6f52;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .video-contenedor {
+            width: 100%;
+            max-width: 450px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+            border: 1px solid #e8e6e0;
+        }
+
+        .video-contenedor video {
+            width: 100%;
+            border-radius: 12px;
+            display: block;
+        }
+
+        /* Sección de Galería de Especialidades */
+        .productos-seccion {
+            max-width: 1200px;
+            margin: 0 auto 80px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .productos-seccion h2 {
+            font-family: 'Georgia', serif;
+            font-size: 2.4rem;
+            color: #4f6f52;
+            margin-bottom: 15px;
+        }
+
+        .subtitulo-galeria {
+            font-size: 1.1rem;
+            color: #739072;
+            margin-bottom: 45px;
+        }
+
+        /* El Grid de Productos */
+        .grid-productos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+        }
+
+        /* Tarjetas */
+        .tarjeta-pastel {
+            background: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.04);
+            border: 1px solid #e8e6e0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .tarjeta-pastel:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(79, 111, 82, 0.12);
+        }
+
+        .img-contenedor {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            background-color: #f0ede6;
+        }
+
+        .tarjeta-pastel img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .tarjeta-pastel:hover img {
+            transform: scale(1.04);
+        }
+
+        .info-pastel {
+            padding: 25px 20px;
+            text-align: left;
+        }
+
+        .info-pastel h3 {
+            font-size: 1.4rem;
+            color: #3a4d39;
+            margin-bottom: 10px;
+            font-family: 'Georgia', serif;
+        }
+
+        .info-pastel p {
+            font-size: 0.95rem;
+            color: #556b54;
+            line-height: 1.6;
+        }
+
+        /* Pie de Página */
+        footer {
+            background-color: #3a4d39;
+            color: #f7f5f0;
+            text-align: center;
+            padding: 50px 20px;
+            border-top: 4px solid #86a789;
+        }
+
+        footer p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .contacto-info {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #cedebd;
+        }
     </style>
 </head>
 <body>
-    <h1>Bienvenido a Pastel a sus Pasteles</h1>
-    <p>Preparados con amor y dedicación.</p>
-    <!-- Asegúrate de tener tu imagen en esta misma carpeta y cambia el nombre abajo -->
-    <img src="WhatsApp Image 2026-07-17 at 19.17.26.jpeg" alt="Pastel artesanal">
+
+    <header class="hero">
+        <h1>Pastel a sus Pasteles</h1>
+        <p>Preparados con amor, dedicación e ingredientes seleccionados</p>
+        <a href="#contacto" class="btn">Encargar un Momento Especial</a>
+    </header>
+
+    <section class="quienes-somos">
+        <h2>Nuestra Filosofía</h2>
+        <p>"En Pastel a tus pasteles preparamos cada pastel a mano, pensando en momentos familiares y celebraciones significativas."</p>
+        <p>"Nos concentramos en seleccionar buenos ingredientes y en cuidar cada detalle, para que cada pastel transmite cercanía y sabor casero."</p>
+    </section>
+
+    <section class="video-seccion">
+        <h2>Preguntas Frecuentes</h2>
+        <div class="video-contenedor">
+            <video controls>
+                <source src="Anuncio en Video para Pinterest Curso Online Repostería Moderno Morado .mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de este video.
+            </video>
+        </div>
+    </section>
+
+    <section class="productos-seccion">
+        <h2>Nuestras Creaciones Reales</h2>
+        <p class="subtitulo-galeria">Hechos artesanalmente, cuidando la estética y el sabor casero en cada detalle.</p>
+        
+        <div class="grid-productos">
+
+            <div class="tarjeta-pastel">
+                <div class="img-contenedor">
+                    <img src="dssd.jpeg" alt="Tarta dorada artesanal">
+                </div>
+                <div class="info-pastel">
+                    <h3>Tartas & Kuchens</h3>
+                    <p>Capa dorada perfectamente horneada sobre base artesanal, ideal para compartir en una tarde familiar.</p>
+                </div>
+            </div>
+
+            <div class="tarjeta-pastel">
+                <div class="img-contenedor">
+                    <img src="pasteles.jpeg" alt="Pastel tradicional feliz cumpleaños">
+                </div>
+                <div class="info-pastel">
+                    <h3>Tortas Tradicionales</h3>
+                    <p>Decorado clásico y elegante con drips de manjar y crema fresca para celebrar anniversarios y cumpleaños significativos.</p>
+                </div>
+            </div>
+
+            <div class="tarjeta-pastel">
+                <div class="img-contenedor">
+                    <img src="pasteles2.jpeg" alt="Pastel temático anime">
+                </div>
+                <div class="info-pastel">
+                    <h3>Diseños Temáticos</h3>
+                    <p>Personalización detallada con colores vivos e imágenes nítidas de tus temáticas favoritas para sorprender a los más apasionados.</p>
+                </div>
+            </div>
+
+            <div class="tarjeta-pastel">
+                <div class="img-contenedor">
+                    <img src="RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR.jpeg" alt="Tarta de frutas frescas">
+                </div>
+                <div class="info-pastel">
+                    <h3>Tartas de Frutas Silvestres</h3>
+                    <p>Una refrescante y colorida selección de kiwis, frutillas y frambuesas dispuestas minuciosamente sobre una base ligera de crema.</p>
+                </div>
+            </div>
+
+            <div class="tarjeta-pastel">
+                <div class="img-contenedor">
+                    <img src="ssss.jpeg" alt="Torta de novios rosas blancas">
+                </div>
+                <div class="info-pastel">
+                    <h3>Línea de Novios & Bodas</h3>
+                    <p>Estructura imponente de varios niveles decorada con rosas blancas esculpidas en crema para bodas memorables.</p>
+                </div>
+            </div>
+
+            <div class="tarjeta-pastel">
+                <div class="img-contenedor">
+                    <img src="WhatsApp Image 2026-07-17 at 15.37.23.jpeg" alt="Torta rosada decorada">
+                </div>
+                <div class="info-pastel">
+                    <h3>Clásicos de Vitrina</h3>
+                    <p>Suave cobertura texturizada color rosa pastel adornada con delicados detalles de chocolate blanco.</p>
+                </div>
+            </div>
+
+            <div class="tarjeta-pastel">
+                <div class="img-contenedor">
+                    <img src="WhatsApp Image 2026-07-17 at 15.37.24.jpeg" alt="Variedad de porciones de postre">
+                </div>
+                <div class="info-pastel">
+                    <h3>Cajas de Degustación</h3>
+                    <p>Porciones simétricas y surtidas que van desde brownies densos hasta cuadraditos frutales con copete de merengue.</p>
+                </div>
+            </div>
+
+            <div class="tarjeta-pastel">
+                <div class="img-contenedor">
+                    <img src="WhatsApp Image 2026-07-17 at 15.37.24aA.jpeg" alt="Torta temática de fútbol">
+                </div>
+                <div class="info-pastel">
+                    <h3>Tortas Deportivas</h3>
+                    <p>Decoración con mangas pasteleras de alta definición emulando un campo de fútbol y un balón texturizado.</p>
+                </div>
+            </div>
+
+            <div class="tarjeta-pastel">
+                <div class="img-contenedor">
+                    <img src="WhatsApp Image 2026-07-17 at 15.37.24sss.jpeg" alt="Cheesecake de frambuesas">
+                </div>
+                <div class="info-pastel">
+                    <h3>Cheesecakes & Mousses</h3>
+                    <p>Textura cremosa y suave marmolada con un coulis denso e intenso de frambuesas silvestres seleccionadas.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <p>&copy; 2026 Pastel a sus Pasteles - Todos los derechos reservados.</p>
+        <p class="contacto-info">🌿 Hecho a mano, con amor por el sabor natural y casero.</p>
+    </footer>
+
 </body>
 </html>
