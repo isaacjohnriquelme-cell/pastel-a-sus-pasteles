@@ -35,8 +35,8 @@
         /* --- Header / Hero --- */
         .hero-faq {
             text-align: center;
-            padding: 50px 20px 30px;
-            background: rgba(255, 247, 240, 0.60);
+            padding: 40px 20px 25px;
+            background: rgba(255, 247, 240, 0.65);
             backdrop-filter: blur(4px);
             border-bottom: 2px dashed rgba(217, 187, 160, 0.8);
         }
@@ -44,7 +44,7 @@
         .logo-contenedor {
             display: inline-block;
             position: relative;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             padding: 5px;
             border-radius: 50%;
             transition: transform 0.3s ease;
@@ -55,21 +55,21 @@
         }
 
         .logo-img {
-            max-width: 220px;
+            max-width: 200px;
             width: 100%;
             height: auto;
             display: block;
             border-radius: 50%;
-            filter: drop-shadow(0 12px 20px rgba(74, 46, 27, 0.3));
+            filter: drop-shadow(0 10px 20px rgba(74, 46, 27, 0.3));
         }
 
         .hero-faq h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
         }
 
         .hero-faq p {
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: #4a2e1b;
             font-weight: 600;
             text-shadow: 0 1px 2px rgba(255,255,255,0.8);
@@ -77,8 +77,8 @@
 
         /* --- Botón Volver --- */
         .contenedor-volver {
-            max-width: 800px;
-            margin: 30px auto 0;
+            max-width: 750px;
+            margin: 25px auto 0;
             padding: 0 20px;
         }
 
@@ -88,11 +88,11 @@
             gap: 8px;
             background-color: rgba(255, 255, 255, 0.95);
             color: #4a2e1b;
-            padding: 10px 22px;
+            padding: 8px 20px;
             text-decoration: none;
             border-radius: 30px;
             font-weight: 600;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             border: 1px solid #ebd2be;
             box-shadow: 0 4px 12px rgba(74, 46, 27, 0.1);
             transition: all 0.3s ease;
@@ -105,40 +105,65 @@
             transform: translateX(-4px);
         }
 
-        /* --- Preguntas Frecuentes --- */
+        /* --- Acordeones FAQ Automatizados --- */
         .faq-seccion {
-            max-width: 800px;
-            margin: 30px auto 60px;
+            max-width: 750px;
+            margin: 25px auto 60px;
             padding: 0 20px;
         }
 
-        .faq-item {
-            background-color: rgba(255, 255, 255, 0.90);
-            backdrop-filter: blur(5px);
-            border-radius: 16px;
-            padding: 28px;
-            margin-bottom: 20px;
+        details {
+            background-color: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(6px);
+            border-radius: 14px;
+            margin-bottom: 15px;
             border: 1px solid #ebd2be;
-            box-shadow: 0 8px 20px rgba(74, 46, 27, 0.12);
-            transition: transform 0.2s ease;
+            box-shadow: 0 6px 18px rgba(74, 46, 27, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
         }
 
-        .faq-item:hover {
-            transform: translateY(-2px);
+        details[open] {
+            border-color: #d87d4a;
+            box-shadow: 0 8px 25px rgba(216, 125, 74, 0.2);
         }
 
-        .faq-item h3 {
-            font-size: 1.3rem;
-            margin-bottom: 12px;
+        summary {
+            padding: 18px 22px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #4a2e1b;
+            cursor: pointer;
+            list-style: none;
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            gap: 10px;
+            user-select: none;
         }
 
-        .faq-item p {
-            font-size: 1rem;
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: '➕';
+            font-size: 0.9rem;
+            color: #d87d4a;
+            transition: transform 0.3s ease;
+        }
+
+        details[open] summary::after {
+            content: '➖';
+            transform: rotate(180deg);
+        }
+
+        details p {
+            padding: 0 22px 20px 22px;
+            font-size: 0.98rem;
             color: #4a382c;
-            font-weight: 400;
+            border-top: 1px dashed #ebd2be;
+            padding-top: 12px;
+            margin-top: 5px;
         }
 
         /* --- Footer --- */
@@ -146,12 +171,12 @@
             background-color: #4a2e1b;
             color: #f7eee5;
             text-align: center;
-            padding: 40px 20px;
-            margin-top: 60px;
+            padding: 35px 20px;
+            margin-top: 50px;
         }
 
         footer p {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             opacity: 0.9;
         }
 
@@ -166,8 +191,8 @@
         <a href="index.html" class="logo-contenedor">
             <img src="Fondo.pngvv.png" alt="Luna de Almendra Pastelería Artesanal" class="logo-img">
         </a>
-        <h1>Preguntas Frecuentes</h1>
-        <p>Todo lo que necesitas saber antes de realizar tu encargo</p>
+        <h1>Resuelve tus dudas en un clic</h1>
+        <p>Información rápida, directa y sin sorpresas</p>
     </header>
 
     <div class="contenedor-volver">
@@ -176,30 +201,29 @@
 
     <main class="faq-seccion">
 
-        <div class="faq-item">
-            <h3>🎂 ¿Con cuánto tiempo de anticipación debo hacer mi pedido?</h3>
-            <p>Recomendamos realizar tu pedido con al menos <strong>3 a 5 días de anticipación</strong> para tortas tradicionales, y con <strong>1 semana de anticipación</strong> para pedidos personalizados o eventos especiales.</p>
-        </div>
+        <!-- Pregunta 1 -->
+        <details>
+            <summary>🌱 ¿Tienen opciones sin gluten o sin lactosa?</summary>
+            <p>Sí. La disponibilidad varía según ingredientes frescos. Para pedidos especiales adaptados, contáctanos con anticipación y coordinamos tu receta.</p>
+        </details>
 
-        <div class="faq-item">
-            <h3>🛵 ¿Cuentan con servicio de despacho a domicilio?</h3>
-            <p>Sí, realizamos entregas a domicilio con costo adicional según la comuna. También puedes coordinar el retiro presencial en nuestro punto de entrega de forma gratuita.</p>
-        </div>
+        <!-- Pregunta 2 -->
+        <details>
+            <summary>🎉 ¿Cómo encargo para cumpleaños o eventos?</summary>
+            <p>Escríbenos con la fecha y cantidad de invitados. Te enviamos la propuesta rápidamente. Para eventos grandes solicitamos margen de días por el tiempo de fermentación natural.</p>
+        </details>
 
-        <div class="faq-item">
-            <h3>💳 ¿Cuáles son los medios de pago aceptados?</h3>
-            <p>Aceptamos transferencia bancaria directa y pagos con tarjeta de débito/crédito. Para confirmar tu pedido requerimos un abono del 50% y el saldo restante se cancela al momento de la entrega.</p>
-        </div>
+        <!-- Pregunta 3 -->
+        <details>
+            <summary>🛵 ¿Hacen envíos a domicilio?</summary>
+            <p>Repartimos en zonas cercanas a nuestra ubicación física en franja matutina. También contamos con opción de retiro presencial directo en tienda.</p>
+        </details>
 
-        <div class="faq-item">
-            <h3>🎨 ¿Puedo personalizar el diseño o sabor de mi pastel?</h3>
-            <p>¡Por supuesto! Nos encanta crear diseños únicos. Puedes enviarnos tus referencias por WhatsApp y elegiremos juntos el bizcocho, rellenos y cobertura de tu preferencia.</p>
-        </div>
-
-        <div class="faq-item">
-            <h3>❄️ ¿Cómo debo conservar mi tarta o pastel?</h3>
-            <p>Nuestras creaciones son 100% artesanales y sin conservantes artificiales. Deben mantenerse refrigeradas entre 2°C y 5°C. Te sugerimos retirarla del frío 15-20 minutos antes de consumir para disfrutar al máximo sus texturas y sabores.</p>
-        </div>
+        <!-- Pregunta 4 -->
+        <details>
+            <summary>🎨 ¿Puedo encargar una tarta personalizada?</summary>
+            <p>Por supuesto. Diseñamos juntos el estilo, relleno y cobertura según tu idea. Contáctanos por WhatsApp para cotizar según la complejidad de tu diseño.</p>
+        </details>
 
     </main>
 
