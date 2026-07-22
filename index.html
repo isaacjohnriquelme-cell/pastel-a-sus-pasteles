@@ -16,9 +16,9 @@
 
         body {
             font-family: 'Poppins', sans-serif;
+            background-color: #f7eee5;
             color: #4a382c;
             line-height: 1.6;
-            background-color: #f7eee5;
         }
 
         h1, h2, h3 {
@@ -27,183 +27,401 @@
             color: #4a2e1b;
         }
 
-        /* --- HERO --- */
+        /* --- Header / Hero Integrado --- */
         .hero {
-            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('pasteleria.jpeg');
-            background-size: cover;
-            background-position: center;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
             text-align: center;
-            color: white;
-            padding: 20px;
+            padding: 60px 20px;
+            background: linear-gradient(180deg, #fff7f0 0%, #f7eee5 100%);
+            border-bottom: 2px dashed #d9bba0;
         }
 
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        .logo-contenedor {
+            display: inline-block;
+            position: relative;
+            margin-bottom: 25px;
+            padding: 5px;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-contenedor:hover {
+            transform: scale(1.04) rotate(-1deg);
+        }
+
+        .logo-img {
+            max-width: 320px;
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 50%;
+            filter: drop-shadow(0 15px 25px rgba(74, 46, 27, 0.2));
         }
 
         .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 25px;
-            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+            font-size: 1.25rem;
+            color: #8c5a38;
+            margin-bottom: 30px;
+            font-weight: 500;
         }
 
-        .btn-tienda {
+        .btn {
+            display: inline-block;
             background-color: #d87d4a;
-            color: white;
-            padding: 12px 30px;
+            color: #ffffff;
+            padding: 16px 38px;
             text-decoration: none;
-            border-radius: 30px;
-            font-weight: 600;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            transition: background 0.3s ease;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(216, 125, 74, 0.3);
         }
 
-        .btn-tienda:hover {
-            background-color: #c0693a;
+        .btn:hover {
+            background-color: #bf6635;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(216, 125, 74, 0.4);
         }
 
-        /* --- PRESENTACIÓN --- */
-        .presentacion {
-            max-width: 800px;
+        /* --- Historia --- */
+        .historia {
+            max-width: 900px;
             margin: 60px auto;
-            padding: 0 20px;
+            padding: 40px 30px;
+            background-color: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(74, 46, 27, 0.05);
             text-align: center;
-            font-size: 1.15rem;
-            color: #5a4538;
-        }
-
-        /* --- PILARES --- */
-        .pilares-seccion {
-            max-width: 1100px;
-            margin: 60px auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .tarjeta-pilar {
-            background: white;
-            padding: 30px;
-            border-radius: 16px;
-            box-shadow: 0 6px 20px rgba(74, 46, 27, 0.08);
+            position: relative;
             border: 1px solid #ebd2be;
         }
 
-        .tarjeta-pilar h3 {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .tarjeta-pilar ul {
-            list-style: none;
-        }
-
-        .tarjeta-pilar li {
-            margin-bottom: 8px;
-            position: relative;
-            padding-left: 15px;
-        }
-
-        .tarjeta-pilar li::before {
-            content: "•";
-            color: #d87d4a;
+        .historia::before {
+            content: '🍒';
+            font-size: 2rem;
             position: absolute;
-            left: 0;
-            font-weight: bold;
+            top: -22px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #f7eee5;
+            padding: 0 15px;
         }
 
-        /* --- ENLACE A FAQ --- */
-        .faq-link-container {
-            text-align: center;
-            margin: 60px 0;
+        .historia h2 {
+            font-size: 2.3rem;
+            margin-bottom: 20px;
         }
 
-        .btn-faq {
-            display: inline-block;
-            background-color: #4a2e1b;
-            color: #f7eee5;
-            padding: 14px 35px;
-            border-radius: 30px;
-            text-decoration: none;
+        .historia p {
+            font-size: 1.1rem;
+            color: #665042;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+
+        .resaltado {
+            color: #d87d4a;
             font-weight: 600;
-            transition: background 0.3s ease;
         }
 
-        .btn-faq:hover {
-            background-color: #d87d4a;
+        /* --- Sección Video Clickeable --- */
+        .video-seccion {
+            background-color: #efe2d5;
+            padding: 60px 20px;
+            text-align: center;
         }
 
+        .video-link {
+            display: block;
+            max-width: 480px;
+            margin: 0 auto;
+            text-decoration: none;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .video-link:hover {
+            transform: scale(1.02);
+        }
+
+        .video-contenedor {
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 18px;
+            box-shadow: 0 12px 35px rgba(74, 46, 27, 0.1);
+            border: 1px solid #ebd2be;
+        }
+
+        .video-contenedor video {
+            width: 100%;
+            border-radius: 12px;
+            display: block;
+            pointer-events: none;
+        }
+
+        .video-indicador {
+            margin-top: 15px;
+            font-size: 0.95rem;
+            color: #8c5a38;
+            font-weight: 600;
+        }
+
+        /* --- Galería --- */
+        .galeria-seccion {
+            max-width: 1200px;
+            margin: 70px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .galeria-seccion h2 {
+            font-size: 2.6rem;
+            margin-bottom: 40px;
+        }
+
+        .grid-pasteles {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .pastel-item {
+            background: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(74, 46, 27, 0.05);
+            border: 1px solid #ebd2be;
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .pastel-item:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Destacado para la Caja de Dulces Variados ($16.000) */
+        .pastel-item.destacado {
+            border: 3px solid #d87d4a;
+            box-shadow: 0 12px 30px rgba(216, 125, 74, 0.25);
+        }
+
+        .badge-precio {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #4a2e1b;
+            color: #ffffff;
+            font-size: 1.3rem;
+            font-weight: 700;
+            padding: 8px 18px;
+            border-radius: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            border: 2px solid #fff;
+            z-index: 10;
+        }
+
+        .img-box {
+            width: 100%;
+            height: 320px;
+            overflow: hidden;
+        }
+
+        .pastel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .detalles-box {
+            padding: 25px;
+            text-align: left;
+        }
+
+        .detalles-box h3 {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+        }
+
+        .detalles-box p {
+            font-size: 0.95rem;
+            color: #665042;
+            font-weight: 300;
+        }
+
+        /* --- Footer --- */
         footer {
             background-color: #4a2e1b;
             color: #f7eee5;
             text-align: center;
-            padding: 30px;
-            margin-top: 60px;
+            padding: 50px 20px;
+            margin-top: 80px;
+        }
+
+        footer p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin-bottom: 8px;
+        }
+
+        .amor {
+            color: #d87d4a;
         }
     </style>
 </head>
 <body>
 
     <header class="hero">
-        <!-- Logo actualizado usando Fondo.png -->
-        <div style="margin-bottom: 20px;">
-            <img src="Fondo.png" alt="Luna de Almendra" style="max-width: 180px; border-radius: 50%; box-shadow: 0 8px 20px rgba(0,0,0,0.3);">
+        <div class="logo-contenedor">
+            <img src="logo.png" alt="Luna de Almendra Pastelería Artesanal" class="logo-img">
         </div>
-        <h1>¿Cansado de repostería industrial?</h1>
-        <p>Hecho a mano. Con amor. Y con el doble de chocolate.</p>
-        <a href="https://wa.me/TU_NUMERO_AQUI" class="btn-tienda">Ver lo que hay hoy →</a>
+        <p>Endulzando tus momentos especiales con la mejor receta artesanal</p>
+        <a href="https://wa.me/TU_NUMERO_AQUI" class="btn">Encargar mi Dulce Momento</a>
     </header>
 
-    <section class="presentacion">
-        <p>"Olvídate de las masas congeladas. Aquí amasamos a las 5 de la mañana para que tú disfrutes a las 10. Usamos mantequilla de verdad, huevos camperos y fruta de temporada. No somos una fábrica, somos una obsesión. Si pruebas nuestro cruasán, entenderás por qué no paramos de repetir la palabra repostería... porque es la única que nos sale del corazón."</p>
+    <section class="historia">
+        <h2>Nuestra Dulce Historia</h2>
+        <p>En <span class="resaltado">Luna de Almendra</span>, creemos que un pastel es mucho más que masa y azúcar. Es la excusa perfecta para reunir a quienes amas y compartir <span class="resaltado">sonrisas inolvidables</span>.</p>
+        <p>Cada una de nuestras creaciones nace de recetas hechas desde cero, con paciencia, sabor casero y el cariño de una preparación artesanal.</p>
     </section>
 
-    <section class="pilares-seccion">
-        <div class="tarjeta-pilar">
-            <h3>☕ Calidad sin trampas</h3>
-            <ul>
-                <li>Sin conservantes.</li>
-                <li>Sin colorantes.</li>
-                <li>Recetas de la abuela (pero con tupper).</li>
-            </ul>
-        </div>
-
-        <div class="tarjeta-pilar">
-            <h3>⏳ Tiempo real</h3>
-            <ul>
-                <li>Horneamos 3 veces al día.</li>
-                <li>Si se acaba, se acabó.</li>
-                <li>No guardamos de un día para otro.</li>
-            </ul>
-        </div>
-
-        <div class="tarjeta-pilar">
-            <h3>❓ ¿Dudas?</h3>
-            <ul>
-                <li>¿Alergias? Pregunta rápido.</li>
-                <li>¿Pedidos para eventos? Mira abajo.</li>
-                <li>¿No ves tu favorito? Escríbenos.</li>
-            </ul>
-        </div>
+    <!-- Video Clickeable que lleva a faq.html -->
+    <section class="video-seccion">
+        <a href="faq.html" class="video-link" title="Haz clic para ver las Preguntas Frecuentes">
+            <div class="video-contenedor">
+                <video autoplay loop muted playsinline>
+                    <source src="video.mp4" type="video/mp4">
+                    Tu navegador no soporta el video.
+                </video>
+                <p class="video-indicador">✨ Haz clic aquí para resolver tus dudas frecuentes ✨</p>
+            </div>
+        </a>
     </section>
 
-    <div class="faq-link-container">
-        <a href="faq.html" class="btn-faq">Ver Preguntas Frecuentes (FAQ) ➔</a>
-    </div>
+    <!-- Galería con imágenes en la carpeta pasteles/ -->
+    <section class="galeria-seccion">
+        <h2>Nuestras Especialidades</h2>
+        
+        <div class="grid-pasteles">
+            
+            <div class="pastel-item">
+                <div class="img-box">
+                    <img src="pasteles/dssd.jpeg" alt="Kuchen dorada artesanal">
+                </div>
+                <div class="detalles-box">
+                    <h3>Tartas & Kuchens</h3>
+                    <p>Crocante dorado, textura suave y horneado lento para resaltar la fruta natural.</p>
+                </div>
+            </div>
+
+            <div class="pastel-item">
+                <div class="img-box">
+                    <img src="pasteles/pasteles.jpeg" alt="Torta de cumpleaños de crema con manjar">
+                </div>
+                <div class="detalles-box">
+                    <h3>Torta de Cumpleaños</h3>
+                    <p>Diseño clásico con abundante manjar artesanal y cobertura de crema suave.</p>
+                </div>
+            </div>
+
+            <div class="pastel-item">
+                <div class="img-box">
+                    <img src="pasteles/pasteles2.jpeg" alt="Torta temática de anime">
+                </div>
+                <div class="detalles-box">
+                    <h3>Torta Temática</h3>
+                    <p>Llevamos tus personajes favoritos al pastel con colores vivos y gran sabor.</p>
+                </div>
+            </div>
+
+            <div class="pastel-item">
+                <div class="img-box">
+                    <img src="pasteles/frutas.jpeg" alt="Torta de frutas frescas">
+                </div>
+                <div class="detalles-box">
+                    <h3>Tarta de Frutas Frescas</h3>
+                    <p>Cargada de frutillas, kiwi y duraznos seleccionados sobre una crema pastelera única.</p>
+                </div>
+            </div>
+
+            <div class="pastel-item">
+                <div class="img-box">
+                    <img src="pasteles/ssss.jpeg" alt="Torta elegante de matrimonio">
+                </div>
+                <div class="detalles-box">
+                    <h3>Torta para Eventos Especiales</h3>
+                    <p>Elegante diseño de varios pisos decorado con rosas finas para momentos inolvidables.</p>
+                </div>
+            </div>
+
+            <div class="pastel-item">
+                <div class="img-box">
+                    <img src="pasteles/rosa.jpeg" alt="Torta Rosa Vintage">
+                </div>
+                <div class="detalles-box">
+                    <h3>Torta Rosa Vintage</h3>
+                    <p>Texturas de crema rosada con detalles en chocolate blanco y sabor tradicional.</p>
+                </div>
+            </div>
+
+            <!-- PRODUCTO DESTACADO ($16.000) -->
+            <div class="pastel-item destacado">
+                <div class="badge-precio">$16.000 CLP</div>
+                <div class="img-box">
+                    <img src="pasteles/caja.jpeg" alt="Caja de mini bocadillos y brownies">
+                </div>
+                <div class="detalles-box">
+                    <h3>⭐ Caja de Dulces Variados</h3>
+                    <p>¡Nuestra estrella! Surtido irresistible de brownies, lemon pie en cubos y bocadillos para compartir.</p>
+                </div>
+            </div>
+
+            <div class="pastel-item">
+                <div class="img-box">
+                    <img src="pasteles/dorada.jpeg" alt="Torta Dorada de Aniversario">
+                </div>
+                <div class="detalles-box">
+                    <h3>Torta Dorada de Aniversario</h3>
+                    <p>Elegante cobertura en tonos cálidos con finos chorreos dorados y detalles delicados.</p>
+                </div>
+            </div>
+
+            <div class="pastel-item">
+                <div class="img-box">
+                    <img src="pasteles/futbolera.jpeg" alt="Torta temática pelota de fútbol">
+                </div>
+                <div class="detalles-box">
+                    <h3>Torta Futbolera</h3>
+                    <p>Diseño personalizado en crema decorado para los amantes del deporte.</p>
+                </div>
+            </div>
+
+            <div class="pastel-item">
+                <div class="img-box">
+                    <img src="pasteles/frambuesa.jpeg" alt="Cheesecake de frambuesa">
+                </div>
+                <div class="detalles-box">
+                    <h3>Cheesecake de Frambuesa</h3>
+                    <p>Textura cremosa horneada con salsa artesanal de frutos rojos.</p>
+                </div>
+            </div>
+
+            <div class="pastel-item">
+                <div class="img-box">
+                    <img src="pasteles/arandanos.jpeg" alt="Cheesecake de arándanos">
+                </div>
+                <div class="detalles-box">
+                    <h3>Cheesecake de Arándanos</h3>
+                    <p>El equilibrio perfecto entre el queso crema suave y arándanos frescos.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
 
     <footer>
-        <p>&copy; 2026 Luna de Almendra. Todos los derechos reservados.</p>
+        <p>&copy; 2026 Luna de Almendra. Hecho con <span class="amor">❤</span> y dedicación artesanal.</p>
     </footer>
 
 </body>
