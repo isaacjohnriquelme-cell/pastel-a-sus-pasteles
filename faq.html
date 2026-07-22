@@ -16,9 +16,13 @@
 
         body {
             font-family: 'Poppins', sans-serif;
+            /* Mismo fondo de pastelería integrado para mantener coherencia */
+            background: linear-gradient(rgba(247, 238, 229, 0.92), rgba(247, 238, 229, 0.92)), url('pasteleria_3.jpeg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
             color: #4a382c;
             line-height: 1.6;
-            background-color: #f7eee5;
         }
 
         h1, h2, h3 {
@@ -29,26 +33,34 @@
 
         .hero-faq {
             text-align: center;
-            padding: 40px 20px 25px;
-            background: #ffffff;
+            padding: 50px 20px 30px;
+            background: rgba(255, 255, 255, 0.95);
             border-bottom: 2px dashed #ebd2be;
         }
 
         .hero-faq img {
-            max-width: 150px;
+            max-width: 180px; /* Logo más grande acorde a la página principal */
+            width: 100%;
+            height: auto;
             border-radius: 50%;
             margin-bottom: 15px;
-            box-shadow: 0 4px 10px rgba(74, 46, 27, 0.15);
+            box-shadow: 0 8px 20px rgba(74, 46, 27, 0.2);
+            border: 3px solid #ebd2be;
         }
 
         .hero-faq h1 {
-            font-size: 2rem;
+            font-size: 2.3rem;
             margin-bottom: 5px;
+        }
+
+        .hero-faq p {
+            color: #8c5a38;
+            font-weight: 500;
         }
 
         .contenedor-volver {
             max-width: 750px;
-            margin: 25px auto 0;
+            margin: 30px auto 0;
             padding: 0 20px;
         }
 
@@ -56,13 +68,13 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background-color: #ffffff;
+            background-color: rgba(255, 255, 255, 0.95);
             color: #4a2e1b;
-            padding: 8px 20px;
+            padding: 10px 24px;
             text-decoration: none;
             border-radius: 30px;
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             border: 1px solid #ebd2be;
             box-shadow: 0 4px 12px rgba(74, 46, 27, 0.08);
             transition: all 0.3s ease;
@@ -81,12 +93,13 @@
         }
 
         details {
-            background-color: #ffffff;
-            border-radius: 12px;
-            margin-bottom: 15px;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 14px;
+            margin-bottom: 18px;
             border: 1px solid #ebd2be;
-            box-shadow: 0 4px 12px rgba(74, 46, 27, 0.05);
+            box-shadow: c0 6px 20px rgba(74, 46, 27, 0.06);
             overflow: hidden;
+            transition: border-color 0.3s ease;
         }
 
         details[open] {
@@ -94,8 +107,8 @@
         }
 
         summary {
-            padding: 18px 22px;
-            font-size: 1.05rem;
+            padding: 20px 24px;
+            font-size: 1.1rem;
             font-weight: 700;
             color: #4a2e1b;
             cursor: pointer;
@@ -112,7 +125,7 @@
 
         summary::after {
             content: '➕';
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             color: #d87d4a;
         }
 
@@ -121,27 +134,36 @@
         }
 
         details p {
-            padding: 0 22px 20px 22px;
-            font-size: 0.95rem;
-            color: #4a382c;
+            padding: 0 24px 22px 24px;
+            font-size: 1rem;
+            color: #665042;
             border-top: 1px dashed #ebd2be;
-            padding-top: 12px;
+            padding-top: 15px;
             margin-top: 5px;
+            font-weight: 300;
         }
 
         footer {
             background-color: #4a2e1b;
             color: #f7eee5;
             text-align: center;
-            padding: 30px;
-            margin-top: 50px;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+
+        footer p {
+            opacity: 0.9;
+        }
+
+        .amor {
+            color: #d87d4a;
         }
     </style>
 </head>
 <body>
 
     <header class="hero-faq">
-        <!-- Logo actualizado usando Fondo.png -->
+        <!-- Logo actualizado a Fondo.png -->
         <img src="Fondo.png" alt="Luna de Almendra">
         <h1>Preguntas Frecuentes</h1>
         <p>Resuelve tus dudas al instante</p>
@@ -159,7 +181,7 @@
 
         <details>
             <summary>🎉 ¿Cómo encargo para cumpleaños o eventos?</summary>
-            <p>Ponte en contacto con nosotros indicando la fecha y el número de personas. Te enviamos una propuesta rápidamente. Para eventos grandes solicitamos un margen de días (la masa madre no se negocia).</p>
+            <p>Ponte en contacto con nosotros a través de nuestro botón de WhatsApp en la página principal indicando la fecha y el número de personas. Te enviamos una propuesta rápidamente. Para eventos grandes solicitamos un margen de anticipación.</p>
         </details>
 
         <details>
@@ -169,12 +191,17 @@
 
         <details>
             <summary>🎨 ¿Puedo encargar una tarta personalizada?</summary>
-            <p>Por supuesto. Elegimos el diseño, el relleno y la cobertura juntos según la complejidad de tus ideas. Escríbenos con tus propuestas.</p>
+            <p>Por supuesto. Elegimos el diseño, el relleno y la cobertura juntos según la complejidad de tus ideas. Escríbenos con tus propuestas e imágenes de referencia.</p>
+        </details>
+
+        <details>
+            <summary>⭐ ¿Cómo funciona la Caja de Dulces Variados ($16.000)?</summary>
+            <p>Nuestra caja estrella incluye un surtido rotativo de nuestros mejores bocadillos dulces artesanales (brownies, lemon pie en cubos, alfajores, etc.). Es ideal para regalar o compartir en familia sin tener que elegir un solo sabor.</p>
         </details>
     </main>
 
     <footer>
-        <p>&copy; 2026 Luna de Almendra. Todos los derechos reservados.</p>
+        <p>&copy; 2026 Luna de Almendra. Hecho con <span class="amor">❤</span> y dedicación artesanal.</p>
     </footer>
 
 </body>
