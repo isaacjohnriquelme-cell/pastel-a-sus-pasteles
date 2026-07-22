@@ -16,315 +16,413 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #fcf8f2;
-            color: #4a3e3d;
+            background-color: #f7eee5;
+            color: #4a382c;
             line-height: 1.6;
         }
 
-        /* --- Hero Section --- */
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: #4a2e1b;
+        }
+
+        /* --- Header / Hero Integrado --- */
         .hero {
             text-align: center;
-            padding: 50px 20px;
-            background: #fff;
-            border-bottom: 2px dashed #e8d0bd;
+            padding: 60px 20px;
+            background: linear-gradient(180deg, #fff7f0 0%, #f7eee5 100%);
+            border-bottom: 2px dashed #d9bba0;
+        }
+
+        /* Integración del logo para que resalte como sticker/insignia */
+        .logo-contenedor {
+            display: inline-block;
+            position: relative;
+            margin-bottom: 25px;
+            padding: 10px;
+            background: #ffffff;
+            border-radius: 25px;
+            box-shadow: 0 15px 35px rgba(74, 46, 27, 0.15);
+            border: 3px solid #ebd2be;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-contenedor:hover {
+            transform: scale(1.03) rotate(-1deg);
         }
 
         .logo-img {
-            max-width: 280px;
+            max-width: 320px;
             width: 100%;
             height: auto;
-            margin-bottom: 20px;
-            border-radius: 15px;
+            display: block;
+            border-radius: 18px;
         }
 
         .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            color: #6b4423;
+            font-size: 3rem;
             margin-bottom: 10px;
+            color: #4a2e1b;
         }
 
         .hero p {
-            font-size: 1.2rem;
-            color: #a06c3f;
-            font-weight: 600;
-            margin-bottom: 25px;
+            font-size: 1.25rem;
+            color: #8c5a38;
+            margin-bottom: 30px;
+            font-weight: 500;
         }
 
-        .btn-whatsapp {
+        .btn {
             display: inline-block;
-            background-color: #25d366;
-            color: white;
-            padding: 16px 32px;
+            background-color: #d87d4a;
+            color: #ffffff;
+            padding: 16px 38px;
+            text-decoration: none;
             border-radius: 50px;
             font-weight: 700;
-            text-decoration: none;
-            font-size: 1.1rem;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-            transition: transform 0.2s ease;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(216, 125, 74, 0.3);
         }
 
-        .btn-whatsapp:hover {
-            transform: scale(1.05);
+        .btn:hover {
+            background-color: #bf6635;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(216, 125, 74, 0.4);
         }
 
-        /* --- Contenedor Principal --- */
-        .contenedor {
+        /* --- Historia --- */
+        .historia {
             max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        /* --- Presentación --- */
-        .presentacion {
+            margin: 60px auto;
+            padding: 40px 30px;
             background-color: #ffffff;
-            padding: 30px;
-            border-radius: 15px;
-            border: 1px solid #e8d0bd;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(74, 46, 27, 0.05);
             text-align: center;
-            font-size: 1.1rem;
-            margin-bottom: 40px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            position: relative;
+            border: 1px solid #ebd2be;
         }
 
-        /* --- 3 Pilares --- */
-        .pilares-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-bottom: 50px;
-        }
-
-        .pilar-card {
-            background: #ffffff;
-            padding: 25px;
-            border-radius: 12px;
-            border-left: 5px solid #d49a6a;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
-        }
-
-        .pilar-card h3 {
-            font-size: 1.2rem;
-            color: #6b4423;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .pilar-card ul {
-            list-style: none;
-        }
-
-        .pilar-card li {
-            margin-bottom: 8px;
-            font-size: 0.95rem;
-        }
-
-        .pilar-card li::before {
-            content: "• ";
-            color: #d49a6a;
-            font-weight: bold;
-        }
-
-        /* --- Destacado Pastelitos --- */
-        .seccion-destacada {
-            background: #ffffff;
-            border: 2px solid #d49a6a;
-            border-radius: 15px;
-            padding: 30px;
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .seccion-destacada h2 {
-            font-family: 'Playfair Display', serif;
+        .historia::before {
+            content: '🍒';
             font-size: 2rem;
-            color: #6b4423;
+            position: absolute;
+            top: -22px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #f7eee5;
+            padding: 0 15px;
+        }
+
+        .historia h2 {
+            font-size: 2.3rem;
             margin-bottom: 20px;
         }
 
-        .grid-destacado {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            align-items: center;
+        .historia p {
+            font-size: 1.1rem;
+            color: #665042;
+            margin-bottom: 15px;
+            font-weight: 300;
         }
 
-        .card-destacada {
-            max-width: 350px;
-            background: #fcf8f2;
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid #e8d0bd;
+        .resaltado {
+            color: #d87d4a;
+            font-weight: 600;
         }
 
-        .card-destacada img {
+        /* --- Sección Video Clickeable --- */
+        .video-seccion {
+            background-color: #efe2d5;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .video-link {
+            display: block;
+            max-width: 480px;
+            margin: 0 auto;
+            text-decoration: none;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .video-link:hover {
+            transform: scale(1.02);
+        }
+
+        .video-contenedor {
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 18px;
+            box-shadow: 0 12px 35px rgba(74, 46, 27, 0.1);
+            border: 1px solid #ebd2be;
+        }
+
+        .video-contenedor video {
             width: 100%;
-            height: 250px;
+            border-radius: 12px;
+            display: block;
+            pointer-events: none;
+        }
+
+        .video-indicador {
+            margin-top: 15px;
+            font-size: 0.95rem;
+            color: #8c5a38;
+            font-weight: 600;
+        }
+
+        /* --- Galería --- */
+        .galeria-seccion {
+            max-width: 1200px;
+            margin: 70px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .galeria-seccion h2 {
+            font-size: 2.6rem;
+            margin-bottom: 40px;
+        }
+
+        .grid-pasteles {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .pastel-item {
+            background: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(74, 46, 27, 0.05);
+            border: 1px solid #ebd2be;
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .pastel-item:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Destacado exagerado y amigable para el producto de $16.000 */
+        .pastel-item.destacado {
+            border: 3px solid #d87d4a;
+            box-shadow: 0 12px 30px rgba(216, 125, 74, 0.25);
+        }
+
+        .badge-precio {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #4a2e1b;
+            color: #ffffff;
+            font-size: 1.3rem;
+            font-weight: 700;
+            padding: 8px 18px;
+            border-radius: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            border: 2px solid #fff;
+            z-index: 10;
+        }
+
+        .img-box {
+            width: 100%;
+            height: 320px;
+            overflow: hidden;
+        }
+
+        .pastel-item img {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
         }
 
-        .card-body {
-            padding: 20px;
+        .detalles-box {
+            padding: 25px;
+            text-align: left;
         }
 
-        .precio-tag {
-            display: inline-block;
-            background-color: #6b4423;
-            color: #fff;
-            font-size: 1.5rem;
-            font-weight: 700;
-            padding: 8px 20px;
-            border-radius: 25px;
-            margin-top: 10px;
+        .detalles-box h3 {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
         }
 
-        /* --- Acordeón Preguntas Frecuentes --- */
-        .faq-seccion {
-            background: #ffffff;
-            padding: 30px;
-            border-radius: 15px;
-            border: 1px solid #e8d0bd;
-            margin-bottom: 40px;
-        }
-
-        .faq-seccion h2 {
-            text-align: center;
-            font-family: 'Playfair Display', serif;
-            color: #6b4423;
-            margin-bottom: 20px;
-        }
-
-        details {
-            background: #fcf8f2;
-            margin-bottom: 12px;
-            padding: 15px 20px;
-            border-radius: 8px;
-            border: 1px solid #e8d0bd;
-            cursor: pointer;
-        }
-
-        summary {
-            font-weight: 600;
-            color: #6b4423;
-            outline: none;
-        }
-
-        details[open] summary {
-            margin-bottom: 10px;
-            border-bottom: 1px solid #e8d0bd;
-            padding-bottom: 5px;
-        }
-
-        details p {
+        .detalles-box p {
             font-size: 0.95rem;
-            color: #555;
+            color: #665042;
+            font-weight: 300;
         }
 
+        /* --- Footer --- */
         footer {
+            background-color: #4a2e1b;
+            color: #f7eee5;
             text-align: center;
-            padding: 30px;
-            background: #6b4423;
-            color: #fff;
-            margin-top: 50px;
+            padding: 50px 20px;
+            margin-top: 80px;
+        }
+
+        footer p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin-bottom: 8px;
+        }
+
+        .amor {
+            color: #d87d4a;
         }
     </style>
 </head>
 <body>
 
-    <!-- HERO SECTION -->
     <header class="hero">
-        <!-- Reemplaza 'logo.jpeg' por el nombre exacto de la imagen del logo -->
-        <img src="logo.jpeg" alt="Luna de Almendra Logo" class="logo-img">
-        <h1>¿Cansado de repostería industrial?</h1>
-        <p>Hecho a mano. Con amor. Y con el doble de chocolate.</p>
-        <a href="https://wa.me/TU_NUMERO_AQUI" class="btn-whatsapp">Ver lo que hay hoy por WhatsApp →</a>
+        <!-- Logo integrado como emblema central de la marca -->
+        <div class="logo-contenedor">
+            <img src="logo.jpeg" alt="Luna de Almendra Pastelería Artesanal" class="logo-img">
+        </div>
+        <h1>Luna de Almendra</h1>
+        <p>Endulzando tus momentos especiales con la mejor receta artesanal</p>
+        <a href="https://wa.me/TU_NUMERO_AQUI" class="btn">Encargar mi Dulce Momento</a>
     </header>
 
-    <div class="contenedor">
+    <section class="historia">
+        <h2>Nuestra Dulce Historia</h2>
+        <p>En <span class="resaltado">Luna de Almendra</span>, creemos que un pastel es mucho más que masa y azúcar. Es la excusa perfecta para reunir a quienes amas y compartir <span class="resaltado">sonrisas inolvidables</span>.</p>
+        <p>Cada una de nuestras creaciones nace de recetas hechas desde cero, con paciencia, sabor casero y el cariño de una preparación artesanal.</p>
+    </section>
 
-        <!-- PRESENTACIÓN -->
-        <section class="presentacion">
-            <p>"Olvídate de las masas congeladas. Aquí amasamos a las 5 de la mañana para que tú disfrutes a las 10. Usamos mantequilla de verdad, huevos camperos y fruta de temporada. No somos una fábrica, somos una obsesión. Si pruebas nuestro cruasán, entenderás por qué no paramos de repetir la palabra repostería... porque es la única que nos sale del corazón."</p>
-        </section>
-
-        <!-- 3 PILARES -->
-        <section class="pilares-grid">
-            <div class="pilar-card">
-                <h3>☕ Calidad sin trampas</h3>
-                <ul>
-                    <li>Sin conservantes.</li>
-                    <li>Sin colorantes.</li>
-                    <li>Recetas de la abuela (pero con tupper).</li>
-                </ul>
+    <!-- Video Clickeable que lleva a faq.html -->
+    <section class="video-seccion">
+        <a href="faq.html" class="video-link" title="Haz clic para ver las Preguntas Frecuentes">
+            <div class="video-contenedor">
+                <video autoplay loop muted playsinline>
+                    <source src="video.mp4" type="video/mp4">
+                    Tu navegador no soporta el video.
+                </video>
+                <p class="video-indicador">✨ Haz clic aquí para resolver tus dudas frecuentes ✨</p>
             </div>
+        </a>
+    </section>
 
-            <div class="pilar-card">
-                <h3>⏳ Tiempo real</h3>
-                <ul>
-                    <li>Horneamos 3 veces al día.</li>
-                    <li>Si se acaba, se acabó.</li>
-                    <li>No guardamos de un día para otro.</li>
-                </ul>
-            </div>
-
-            <div class="pilar-card">
-                <h3>❓ ¿Dudas? (Automatizado)</h3>
-                <ul>
-                    <li>¿Alergias? Pregunta rápido.</li>
-                    <li>¿Pedidos para eventos? Mira abajo.</li>
-                    <li>¿No ves tu favorito? Escríbenos.</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- DESTACADO EXCLUSIVO CON PRECIO -->
-        <section class="seccion-destacada">
-            <h2>Nuestra Especialidad de la Casa</h2>
-            <div class="grid-destacado">
-                <div class="card-destacada">
-                    <!-- Asegúrate de colocar aquí el nombre de la foto de los pastelitos -->
-                    <img src="pasteles/pasteles.jpeg" alt="Pastelitos Luna de Almendra">
-                    <div class="card-body">
-                        <h3>Pack Pastelitos Artesanales</h3>
-                        <p>Preparados frescos todos los días con ingredientes seleccionados.</p>
-                        <div class="precio-tag">$16.000 CLP</div>
-                    </div>
+    <!-- Galería con precios destacados -->
+    <section class="galeria-seccion">
+        <h2>Nuestras Especialidades</h2>
+        
+        <div class="grid-pasteles">
+            
+            <div class="pastel-item">
+                <div class="img-box">
+                    <img src="dssd.jpeg" alt="Kuchen dorada artesanal">
+                </div>
+                <div class="detalles-box">
+                    <h3>Tartas & Kuchens</h3>
+                    <p>Crocante dorado, textura suave y horneado lento para resaltar la fruta natural.</p>
                 </div>
             </div>
-        </section>
 
-        <!-- ACCORDEÓN AUTOMATIZADO DE FAQ -->
-        <section class="faq-seccion">
-            <h2>Preguntas Frecuentes</h2>
+            <div class="pastel-item">
+                <div class="img-box">
+                    <img src="pasteles.jpeg" alt="Torta de cumpleaños de crema con manjar">
+                </div>
+                <div class="detalles-box">
+                    <h3>Torta de Cumpleaños</h3>
+                    <p>Diseño clásico con abundante manjar artesanal y cobertura de crema suave.</p>
+                </div>
+            </div>
 
-            <details>
-                <summary>¿Hacen repostería sin gluten o sin lactosa?</summary>
-                <p>Sí, pero no tenemos carta fija. Como trabajamos con ingredientes frescos, la disponibilidad cambia cada semana. Si necesitas un pedido especial sin gluten, avísanos con 48h de antelación y adaptamos nuestra receta para ti.</p>
-            </details>
+            <div class="pastel-item">
+                <div class="img-box">
+                    <img src="pasteles2.jpeg" alt="Torta temática de anime">
+                </div>
+                <div class="detalles-box">
+                    <h3>Torta Temática</h3>
+                    <p>Llevamos tus personajes favoritos al pastel con colores vivos y gran sabor.</p>
+                </div>
+            </div>
 
-            <details>
-                <summary>¿Cómo hago un pedido para un cumpleaños o evento?</summary>
-                <p>Escríbenos directamente a WhatsApp con la fecha y el número de personas. Te enviamos un presupuesto rápido. Para eventos de más de 20 personas, necesitamos 5 días de margen (la masa madre no se negocia).</p>
-            </details>
+            <div class="pastel-item">
+                <div class="img-box">
+                    <img src="RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR.jpeg" alt="Torta de frutas frescas">
+                </div>
+                <div class="detalles-box">
+                    <h3>Tarta de Frutas Frescas</h3>
+                    <p>Cargada de frutillas, kiwi y duraznos seleccionados sobre una crema pastelera única.</p>
+                </div>
+            </div>
 
-            <details>
-                <summary>¿Hacen envíos a domicilio?</summary>
-                <p>Hacemos repartos locales. El valor del envío se calcula según la comuna o sector. Consulta tu cobertura directamente al encargar.</p>
-            </details>
+            <div class="pastel-item">
+                <div class="img-box">
+                    <img src="ssss.jpeg" alt="Torta elegante de matrimonio">
+                </div>
+                <div class="detalles-box">
+                    <h3>Torta para Eventos Especiales</h3>
+                    <p>Elegante diseño de varios pisos decorado con rosas finas para momentos inolvidables.</p>
+                </div>
+            </div>
 
-            <details>
-                <summary>¿Puedo encargar una tarta personalizada?</summary>
-                <p>Por supuesto. Elegimos el diseño, el relleno y la cobertura juntos. El precio varía según la complejidad. Escríbenos con tus ideas locas.</p>
-            </details>
-        </section>
+            <div class="pastel-item">
+                <div class="img-box">
+                    <img src="WhatsApp Image 2026-07-17 at 15.37.23.jpeg" alt="Torta de tonos rosa pastel">
+                </div>
+                <div class="detalles-box">
+                    <h3>Torta Rosa Vintage</h3>
+                    <p>Texturas de crema rosada con detalles en chocolate blanco y sabor tradicional.</p>
+                </div>
+            </div>
 
-    </div>
+            <!-- PRODUCTO DESTACADO CON PRECIO EXAGERADO Y AMIGABLE ($16.000) -->
+            <div class="pastel-item destacado">
+                <div class="badge-precio">$16.000 CLP</div>
+                <div class="img-box">
+                    <img src="WhatsApp Image 2026-07-17 at 15.37.24.jpeg" alt="Caja de mini bocadillos y brownies">
+                </div>
+                <div class="detalles-box">
+                    <h3>⭐ Caja de Dulces Variados</h3>
+                    <p>¡Nuestra estrella! Surtido irresistible de brownies, lemon pie en cubos y bocadillos para compartir.</p>
+                </div>
+            </div>
+
+            <div class="pastel-item">
+                <div class="img-box">
+                    <img src="WhatsApp Image 2026-07-17 at 15.37.24aA.jpeg" alt="Torta temática pelota de fútbol">
+                </div>
+                <div class="detalles-box">
+                    <h3>Torta Futbolera</h3>
+                    <p>Diseño personalizado en crema decorado para los amantes del deporte.</p>
+                </div>
+            </div>
+
+            <div class="pastel-item">
+                <div class="img-box">
+                    <img src="WhatsApp Image 2026-07-17 at 15.37.24sss.jpeg" alt="Cheesecake de frambuesa">
+                </div>
+                <div class="detalles-box">
+                    <h3>Cheesecake de Frambuesa</h3>
+                    <p>Textura cremosa horneada con salsa artesanal de frutos rojos.</p>
+                </div>
+            </div>
+
+            <div class="pastel-item">
+                <div class="img-box">
+                    <img src="WhatsApp Image 2026-07-17 at 15.37.24YT.jpeg" alt="Cheesecake de arándanos">
+                </div>
+                <div class="detalles-box">
+                    <h3>Cheesecake de Arándanos</h3>
+                    <p>El equilibrio perfecto entre el queso crema suave y arándanos frescos.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
 
     <footer>
-        <p>&copy; 2026 Luna de Almendra - Pastelería Artesanal</p>
+        <p>&copy; 2026 Luna de Almendra. Hecho con <span class="amor">❤</span> y dedicación artesanal.</p>
     </footer>
 
 </body>
