@@ -18,11 +18,6 @@
             font-family: 'Poppins', sans-serif;
             color: #4a382c;
             line-height: 1.6;
-            background-image: url('pasteleria.jpeg');
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
             background-color: #f7eee5;
         }
 
@@ -32,50 +27,25 @@
             color: #4a2e1b;
         }
 
-        /* --- Header / Hero --- */
         .hero-faq {
             text-align: center;
             padding: 40px 20px 25px;
-            background: rgba(255, 247, 240, 0.65);
-            backdrop-filter: blur(4px);
-            border-bottom: 2px dashed rgba(217, 187, 160, 0.8);
+            background: #ffffff;
+            border-bottom: 2px dashed #ebd2be;
         }
 
-        .logo-contenedor {
-            display: inline-block;
-            position: relative;
+        .hero-faq img {
+            max-width: 150px;
+            border-radius: 50%;
             margin-bottom: 15px;
-            padding: 5px;
-            border-radius: 50%;
-            transition: transform 0.3s ease;
-        }
-
-        .logo-contenedor:hover {
-            transform: scale(1.04) rotate(-1deg);
-        }
-
-        .logo-img {
-            max-width: 200px;
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 50%;
-            filter: drop-shadow(0 10px 20px rgba(74, 46, 27, 0.3));
+            box-shadow: 0 4px 10px rgba(74, 46, 27, 0.15);
         }
 
         .hero-faq h1 {
-            font-size: 2.2rem;
+            font-size: 2rem;
             margin-bottom: 5px;
         }
 
-        .hero-faq p {
-            font-size: 1rem;
-            color: #4a2e1b;
-            font-weight: 600;
-            text-shadow: 0 1px 2px rgba(255,255,255,0.8);
-        }
-
-        /* --- Botón Volver --- */
         .contenedor-volver {
             max-width: 750px;
             margin: 25px auto 0;
@@ -86,7 +56,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background-color: rgba(255, 255, 255, 0.95);
+            background-color: #ffffff;
             color: #4a2e1b;
             padding: 8px 20px;
             text-decoration: none;
@@ -94,7 +64,7 @@
             font-weight: 600;
             font-size: 0.9rem;
             border: 1px solid #ebd2be;
-            box-shadow: 0 4px 12px rgba(74, 46, 27, 0.1);
+            box-shadow: 0 4px 12px rgba(74, 46, 27, 0.08);
             transition: all 0.3s ease;
         }
 
@@ -102,10 +72,8 @@
             background-color: #d87d4a;
             color: #ffffff;
             border-color: #d87d4a;
-            transform: translateX(-4px);
         }
 
-        /* --- Acordeones FAQ Automatizados --- */
         .faq-seccion {
             max-width: 750px;
             margin: 25px auto 60px;
@@ -113,24 +81,21 @@
         }
 
         details {
-            background-color: rgba(255, 255, 255, 0.92);
-            backdrop-filter: blur(6px);
-            border-radius: 14px;
+            background-color: #ffffff;
+            border-radius: 12px;
             margin-bottom: 15px;
             border: 1px solid #ebd2be;
-            box-shadow: 0 6px 18px rgba(74, 46, 27, 0.1);
+            box-shadow: 0 4px 12px rgba(74, 46, 27, 0.05);
             overflow: hidden;
-            transition: all 0.3s ease;
         }
 
         details[open] {
             border-color: #d87d4a;
-            box-shadow: 0 8px 25px rgba(216, 125, 74, 0.2);
         }
 
         summary {
             padding: 18px 22px;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             font-weight: 700;
             color: #4a2e1b;
             cursor: pointer;
@@ -147,52 +112,39 @@
 
         summary::after {
             content: '➕';
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             color: #d87d4a;
-            transition: transform 0.3s ease;
         }
 
         details[open] summary::after {
             content: '➖';
-            transform: rotate(180deg);
         }
 
         details p {
             padding: 0 22px 20px 22px;
-            font-size: 0.98rem;
+            font-size: 0.95rem;
             color: #4a382c;
             border-top: 1px dashed #ebd2be;
             padding-top: 12px;
             margin-top: 5px;
         }
 
-        /* --- Footer --- */
         footer {
             background-color: #4a2e1b;
             color: #f7eee5;
             text-align: center;
-            padding: 35px 20px;
+            padding: 30px;
             margin-top: 50px;
-        }
-
-        footer p {
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-
-        .amor {
-            color: #d87d4a;
         }
     </style>
 </head>
 <body>
 
     <header class="hero-faq">
-        <a href="index.html" class="logo-contenedor">
-            <img src="Fondo.pngvv.png" alt="Luna de Almendra Pastelería Artesanal" class="logo-img">
-        </a>
-        <h1>Resuelve tus dudas en un clic</h1>
-        <p>Información rápida, directa y sin sorpresas</p>
+        <!-- Logo actualizado usando Fondo.png -->
+        <img src="Fondo.png" alt="Luna de Almendra">
+        <h1>Preguntas Frecuentes</h1>
+        <p>Resuelve tus dudas al instante</p>
     </header>
 
     <div class="contenedor-volver">
@@ -200,35 +152,29 @@
     </div>
 
     <main class="faq-seccion">
-
-        <!-- Pregunta 1 -->
         <details>
             <summary>🌱 ¿Tienen opciones sin gluten o sin lactosa?</summary>
-            <p>Sí. La disponibilidad varía según ingredientes frescos. Para pedidos especiales adaptados, contáctanos con anticipación y coordinamos tu receta.</p>
+            <p>Sí, pero no tenemos carta fija. Como trabajamos con ingredientes frescos, la disponibilidad cambia cada semana. Si necesitas un pedido especial sin gluten, avísanos con anticipación y adaptamos nuestra receta para ti.</p>
         </details>
 
-        <!-- Pregunta 2 -->
         <details>
             <summary>🎉 ¿Cómo encargo para cumpleaños o eventos?</summary>
-            <p>Escríbenos con la fecha y cantidad de invitados. Te enviamos la propuesta rápidamente. Para eventos grandes solicitamos margen de días por el tiempo de fermentación natural.</p>
+            <p>Ponte en contacto con nosotros indicando la fecha y el número de personas. Te enviamos una propuesta rápidamente. Para eventos grandes solicitamos un margen de días (la masa madre no se negocia).</p>
         </details>
 
-        <!-- Pregunta 3 -->
         <details>
             <summary>🛵 ¿Hacen envíos a domicilio?</summary>
-            <p>Repartimos en zonas cercanas a nuestra ubicación física en franja matutina. También contamos con opción de retiro presencial directo en tienda.</p>
+            <p>Repartimos en zonas cercanas a nuestra ubicación física en franja matutina. También contamos con la opción de retiro presencial directo en tienda.</p>
         </details>
 
-        <!-- Pregunta 4 -->
         <details>
             <summary>🎨 ¿Puedo encargar una tarta personalizada?</summary>
-            <p>Por supuesto. Diseñamos juntos el estilo, relleno y cobertura según tu idea. Contáctanos por WhatsApp para cotizar según la complejidad de tu diseño.</p>
+            <p>Por supuesto. Elegimos el diseño, el relleno y la cobertura juntos según la complejidad de tus ideas. Escríbenos con tus propuestas.</p>
         </details>
-
     </main>
 
     <footer>
-        <p>&copy; 2026 Luna de Almendra. Hecho con <span class="amor">❤</span> y dedicación artesanal.</p>
+        <p>&copy; 2026 Luna de Almendra. Todos los derechos reservados.</p>
     </footer>
 
 </body>

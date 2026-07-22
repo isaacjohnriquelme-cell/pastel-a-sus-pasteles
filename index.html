@@ -4,13 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luna de Almendra | Pastelería Artesanal</title>
-    <!-- Fuentes Google inspiradas en diseño editorial sofisticado -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant+Garamond:ital,wght@0,300;0,500;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* --- RESET Y BASES --- */
         * {
             margin: 0;
             padding: 0;
@@ -18,696 +15,195 @@
         }
 
         body {
-            font-family: 'Montserrat', sans-serif;
-            color: #3a2e2b;
-            background-color: #f7f2ed;
-            line-height: 1.7;
-            overflow-x: hidden;
+            font-family: 'Poppins', sans-serif;
+            color: #4a382c;
+            line-height: 1.6;
+            background-color: #f7eee5;
         }
 
-        /* --- TIPOGRAFÍA EDITORIAL --- */
-        .font-script {
-            font-family: 'Alex Brush', cursive;
-            color: #b86b43;
-            font-weight: 400;
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: #4a2e1b;
         }
 
-        .font-serif {
-            font-family: 'Bodoni Moda', serif;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #2b1f1d;
-        }
-
-        .font-subserif {
-            font-family: 'Cormorant Garamond', serif;
-        }
-
-        /* --- MENÚ DE NAVEGACIÓN MINIMALISTA --- */
-        nav.navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 50px;
-            background-color: rgba(247, 242, 23d, 0.95);
-            border-bottom: 1px solid rgba(184, 107, 67, 0.2);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            backdrop-filter: blur(8px);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #52403c;
-            font-size: 0.82rem;
-            text-transform: uppercase;
-            letter-spacing: 2.5px;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: #b86b43;
-        }
-
-        .nav-tagline {
-            font-size: 1.5rem;
-            line-height: 1;
-        }
-
-        /* --- HERO HEADER CON FONDO DE PASTELERÍA Y LOGO GIGANTE --- */
-        .hero-wrapper {
-            position: relative;
-            background-image: linear-gradient(rgba(247, 242, 237, 0.60), rgba(247, 242, 237, 0.75)), url('pasteleria.jpeg');
-            background-position: center;
+        /* --- HERO --- */
+        .hero {
+            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('pasteleria.jpeg');
             background-size: cover;
-            background-attachment: fixed;
-            padding: 90px 20px 100px;
-            text-align: center;
-            border-bottom: 1px solid #e0d0c1;
-        }
-
-        .hero-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        .logo-gigante-wrapper {
-            display: inline-block;
-            position: relative;
-            margin-bottom: 30px;
-        }
-
-        .logo-gigante {
-            max-width: 440px;
-            width: 100%;
-            height: auto;
-            border-radius: 50%;
-            filter: drop-shadow(0 20px 35px rgba(58, 46, 43, 0.25));
-            transition: transform 0.5s ease;
-        }
-
-        .logo-gigante-wrapper:hover .logo-gigante {
-            transform: scale(1.03) rotate(-0.5deg);
-        }
-
-        .hero-recomendacion {
-            font-size: 2.8rem;
-            line-height: 1.2;
-            margin-bottom: 20px;
-            color: #2b1f1d;
-        }
-
-        .hero-subtexto {
-            font-size: 1.15rem;
-            max-width: 700px;
-            margin: 0 auto 35px;
-            color: #5e4a44;
-            font-style: italic;
-        }
-
-        .btn-editorial {
-            display: inline-block;
-            padding: 18px 45px;
-            background-color: #2b1f1d;
-            color: #f7f2ed;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            letter-spacing: 3px;
-            font-weight: 600;
-            transition: all 0.4s ease;
-            border: 1px solid #2b1f1d;
-            box-shadow: 0 10px 25px rgba(43, 31, 29, 0.2);
-        }
-
-        .btn-editorial:hover {
-            background-color: #b86b43;
-            border-color: #b86b43;
-            color: #ffffff;
-            transform: translateY(-3px);
-        }
-
-        /* --- SECCIÓN 01: PRESENTACIÓN EDITORIAL --- */
-        .seccion-presentacion {
-            max-width: 1100px;
-            margin: 90px auto;
-            padding: 0 30px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
-        }
-
-        .bloque-texto-corrido {
-            position: relative;
-            padding-left: 20px;
-            border-left: 2px solid #b86b43;
-        }
-
-        .bloque-texto-corrido .numero-seccion {
-            font-size: 0.85rem;
-            letter-spacing: 3px;
-            color: #b86b43;
-            margin-bottom: 15px;
-            display: block;
-        }
-
-        .bloque-texto-corrido p {
-            font-size: 1.15rem;
-            line-height: 1.9;
-            color: #4a3a36;
-        }
-
-        .tarjeta-destacada-hero {
-            background: #ffffff;
-            padding: 45px;
-            border: 1px solid #e2d5c8;
-            box-shadow: 15px 15px 0px #ebdcd0;
-            position: relative;
-        }
-
-        .tarjeta-destacada-hero h3 {
-            font-size: 2rem;
-            margin-bottom: 15px;
-        }
-
-        .script-decorativo {
-            font-size: 3.2rem;
-            display: block;
-            margin-top: -10px;
-            margin-bottom: 10px;
-        }
-
-        /* --- SECCIÓN 02: TRES PILARES --- */
-        .seccion-pilares {
-            background-color: #efe6dc;
-            padding: 90px 30px;
-            border-top: 1px solid #e0d0c1;
-            border-bottom: 1px solid #e0d0c1;
-        }
-
-        .pilares-header {
             text-align: center;
-            margin-bottom: 60px;
+            color: white;
+            padding: 20px;
         }
 
-        .grid-pilares {
-            max-width: 1150px;
-            margin: 0 auto;
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+        }
+
+        .btn-tienda {
+            background-color: #d87d4a;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: background 0.3s ease;
+        }
+
+        .btn-tienda:hover {
+            background-color: #c0693a;
+        }
+
+        /* --- PRESENTACIÓN --- */
+        .presentacion {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 20px;
+            text-align: center;
+            font-size: 1.15rem;
+            color: #5a4538;
+        }
+
+        /* --- PILARES --- */
+        .pilares-seccion {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 20px;
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
         }
 
-        .pilar-card {
-            background: #f7f2ed;
-            padding: 40px 30px;
-            border: 1px solid #dfd0c1;
-            position: relative;
-            transition: transform 0.3s ease;
+        .tarjeta-pilar {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 6px 20px rgba(74, 46, 27, 0.08);
+            border: 1px solid #ebd2be;
         }
 
-        .pilar-card:hover {
-            transform: translateY(-6px);
-        }
-
-        .pilar-icono {
-            font-size: 2.2rem;
-            margin-bottom: 15px;
-            display: block;
-        }
-
-        .pilar-card h4 {
+        .tarjeta-pilar h3 {
             font-size: 1.3rem;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #cbb8a7;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        .pilar-lista {
+        .tarjeta-pilar ul {
             list-style: none;
         }
 
-        .pilar-lista li {
-            font-size: 0.95rem;
-            margin-bottom: 12px;
+        .tarjeta-pilar li {
+            margin-bottom: 8px;
             position: relative;
-            padding-left: 18px;
-            color: #52403c;
+            padding-left: 15px;
         }
 
-        .pilar-lista li::before {
+        .tarjeta-pilar li::before {
             content: "•";
-            color: #b86b43;
+            color: #d87d4a;
             position: absolute;
             left: 0;
-            font-size: 1.2rem;
-            top: -2px;
+            font-weight: bold;
         }
 
-        /* --- SECCIÓN 03: GALERÍA DE ESPECIALIDADES --- */
-        .galeria-seccion {
-            max-width: 1200px;
-            margin: 100px auto;
-            padding: 0 30px;
-        }
-
-        .galeria-header {
+        /* --- ENLACE A FAQ --- */
+        .faq-link-container {
             text-align: center;
-            margin-bottom: 60px;
+            margin: 60px 0;
         }
 
-        .grid-pasteles {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 40px;
-        }
-
-        .pastel-item {
-            background: #ffffff;
-            border: 1px solid #e0d0c1;
-            position: relative;
-            transition: all 0.3s ease;
-        }
-
-        .pastel-item:hover {
-            box-shadow: 0 15px 30px rgba(58, 46, 43, 0.1);
-        }
-
-        .pastel-item.destacado {
-            border: 2px solid #b86b43;
-        }
-
-        .badge-precio {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: #2b1f1d;
-            color: #ffffff;
-            font-size: 0.9rem;
+        .btn-faq {
+            display: inline-block;
+            background-color: #4a2e1b;
+            color: #f7eee5;
+            padding: 14px 35px;
+            border-radius: 30px;
+            text-decoration: none;
             font-weight: 600;
-            padding: 8px 16px;
-            letter-spacing: 1px;
-            z-index: 10;
+            transition: background 0.3s ease;
         }
 
-        .img-box {
-            width: 100%;
-            height: 320px;
-            overflow: hidden;
+        .btn-faq:hover {
+            background-color: #d87d4a;
         }
 
-        .pastel-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .pastel-item:hover img {
-            transform: scale(1.05);
-        }
-
-        .detalles-box {
-            padding: 25px;
-        }
-
-        .detalles-box h3 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-        }
-
-        .detalles-box p {
-            font-size: 0.92rem;
-            color: #665042;
-        }
-
-        /* --- SECCIÓN 04: PREGUNTAS FRECUENTES (INTEGRADO EN INDEX) --- */
-        .seccion-faq {
-            max-width: 850px;
-            margin: 100px auto;
-            padding: 0 30px;
-        }
-
-        .faq-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        details {
-            background-color: #ffffff;
-            border: 1px solid #dfd0c1;
-            margin-bottom: 18px;
-            transition: all 0.3s ease;
-        }
-
-        details[open] {
-            border-color: #b86b43;
-            box-shadow: 0 8px 20px rgba(184, 107, 67, 0.12);
-        }
-
-        summary {
-            padding: 22px 28px;
-            font-size: 1.1rem;
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 700;
-            color: #2b1f1d;
-            cursor: pointer;
-            list-style: none;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            user-select: none;
-        }
-
-        summary::-webkit-details-marker {
-            display: none;
-        }
-
-        summary::after {
-            content: '✦';
-            font-size: 0.9rem;
-            color: #b86b43;
-            transition: transform 0.3s ease;
-        }
-
-        details[open] summary::after {
-            transform: rotate(45deg);
-        }
-
-        details p {
-            padding: 0 28px 22px 28px;
-            font-size: 0.95rem;
-            color: #52403c;
-            border-top: 1px dashed #efe6dc;
-            padding-top: 15px;
-            margin-top: 5px;
-            line-height: 1.8;
-        }
-
-        /* --- FOOTER EDITORIAL --- */
         footer {
-            background-color: #2b1f1d;
-            color: #f7f2ed;
+            background-color: #4a2e1b;
+            color: #f7eee5;
             text-align: center;
-            padding: 60px 20px;
-            border-top: 1px solid #b86b43;
-        }
-
-        footer .logo-footer {
-            max-width: 140px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-            opacity: 0.9;
-        }
-
-        footer p {
-            font-size: 0.85rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            opacity: 0.8;
-        }
-
-        /* --- RESPONSIVO --- */
-        @media (max-width: 850px) {
-            nav.navbar {
-                flex-direction: column;
-                gap: 15px;
-            }
-            .seccion-presentacion {
-                grid-template-columns: 1fr;
-            }
-            .grid-pilares {
-                grid-template-columns: 1fr;
-            }
-            .hero-recomendacion {
-                font-size: 2rem;
-            }
+            padding: 30px;
+            margin-top: 60px;
         }
     </style>
 </head>
 <body>
 
-    <!-- MENÚ SUPERIOR EDITORIAL -->
-    <nav class="navbar">
-        <span class="nav-tagline font-script">Luna de Almendra</span>
-        <ul class="nav-links">
-            <li><a href="#historia">Nosotros</a></li>
-            <li><a href="#pilares">Filosofía</a></li>
-            <li><a href="#menu">Especialidades</a></li>
-            <li><a href="#faq">Dudas</a></li>
-        </ul>
-    </nav>
-
-    <!-- HERO HEADER CON FONDO DE PASTELERÍA Y LOGO GIGANTE -->
-    <header class="hero-wrapper">
-        <div class="hero-container">
-            
-            <div class="logo-gigante-wrapper">
-                <img src="Fondo.pngvv.png" alt="Luna de Almendra Pastelería Artesanal" class="logo-gigante">
-            </div>
-
-            <h1 class="hero-recomendacion font-serif">
-                ¿Cansado de repostería industrial?
-            </h1>
-            
-            <p class="hero-subtexto font-subserif">
-                Te recomendamos descubrir la verdadera pastelería: hecha totalmente a mano, con amor y con el doble de chocolate.
-            </p>
-
-            <a href="https://wa.me/TU_NUMERO_AQUI" class="btn-editorial">
-                Ver lo que hay hoy →
-            </a>
-
+    <header class="hero">
+        <!-- Logo actualizado usando Fondo.png -->
+        <div style="margin-bottom: 20px;">
+            <img src="Fondo.png" alt="Luna de Almendra" style="max-width: 180px; border-radius: 50%; box-shadow: 0 8px 20px rgba(0,0,0,0.3);">
         </div>
+        <h1>¿Cansado de repostería industrial?</h1>
+        <p>Hecho a mano. Con amor. Y con el doble de chocolate.</p>
+        <a href="https://wa.me/TU_NUMERO_AQUI" class="btn-tienda">Ver lo que hay hoy →</a>
     </header>
 
-    <!-- SECCIÓN 01: PRESENTACIÓN EDITORIAL -->
-    <section id="historia" class="seccion-presentacion">
-        
-        <div class="bloque-texto-corrido">
-            <span class="numero-seccion font-serif">01. Nuestra Filosofía</span>
-            <p class="font-subserif">
-                "Olvídate de las masas congeladas. Aquí amasamos a las 5 de la mañana para que tú disfrutes a las 10. Usamos mantequilla de verdad, huevos camperos y fruta de temporada. No somos una fábrica, somos una obsesión. Si pruebas nuestro cruasán, entenderás por qué no paramos de repetir la palabra repostería... porque es la única que nos sale del corazón."
-            </p>
-        </div>
-
-        <div class="tarjeta-destacada-hero">
-            <span class="font-script script-decorativo">Love & Pastry</span>
-            <h3 class="font-serif">Hecho a mano cada mañana</h3>
-            <p style="font-size: 0.92rem; color: #665042;">
-                Cada uno de nuestros productos nace de un proceso lento y cuidadoso, sin aceleradores artificiales ni mezclas preparadas.
-            </p>
-        </div>
-
+    <section class="presentacion">
+        <p>"Olvídate de las masas congeladas. Aquí amasamos a las 5 de la mañana para que tú disfrutes a las 10. Usamos mantequilla de verdad, huevos camperos y fruta de temporada. No somos una fábrica, somos una obsesión. Si pruebas nuestro cruasán, entenderás por qué no paramos de repetir la palabra repostería... porque es la única que nos sale del corazón."</p>
     </section>
 
-    <!-- SECCIÓN 02: TRES PILARES -->
-    <section id="pilares" class="seccion-pilares">
-        <div class="pilares-header">
-            <span class="font-script" style="font-size: 2.5rem; color: #b86b43;">Simplicidad y Calidad</span>
-            <h2 class="font-serif" style="font-size: 2.2rem;">Los 3 Pilares del Sabor</h2>
+    <section class="pilares-seccion">
+        <div class="tarjeta-pilar">
+            <h3>☕ Calidad sin trampas</h3>
+            <ul>
+                <li>Sin conservantes.</li>
+                <li>Sin colorantes.</li>
+                <li>Recetas de la abuela (pero con tupper).</li>
+            </ul>
         </div>
 
-        <div class="grid-pilares">
-            
-            <div class="pilar-card">
-                <span class="pilar-icono">☕</span>
-                <h4 class="font-serif">Calidad sin trampas</h4>
-                <ul class="pilar-lista">
-                    <li>Sin conservantes.</li>
-                    <li>Sin colorantes.</li>
-                    <li>Recetas de la abuela (pero con tupper).</li>
-                </ul>
-            </div>
+        <div class="tarjeta-pilar">
+            <h3>⏳ Tiempo real</h3>
+            <ul>
+                <li>Horneamos 3 veces al día.</li>
+                <li>Si se acaba, se acabó.</li>
+                <li>No guardamos de un día para otro.</li>
+            </ul>
+        </div>
 
-            <div class="pilar-card">
-                <span class="pilar-icono">⏳</span>
-                <h4 class="font-serif">Tiempo real</h4>
-                <ul class="pilar-lista">
-                    <li>Horneamos 3 veces al día.</li>
-                    <li>Si se acaba, se acabó.</li>
-                    <li>No guardamos de un día para otro.</li>
-                </ul>
-            </div>
-
-            <div class="pilar-card">
-                <span class="pilar-icono">❓</span>
-                <h4 class="font-serif">¿Dudas?</h4>
-                <ul class="pilar-lista">
-                    <li>¿Alergias? Pregunta rápido.</li>
-                    <li>¿Pedidos para eventos? Mira abajo.</li>
-                    <li>¿No ves tu favorito? Escríbenos.</li>
-                </ul>
-            </div>
-
+        <div class="tarjeta-pilar">
+            <h3>❓ ¿Dudas?</h3>
+            <ul>
+                <li>¿Alergias? Pregunta rápido.</li>
+                <li>¿Pedidos para eventos? Mira abajo.</li>
+                <li>¿No ves tu favorito? Escríbenos.</li>
+            </ul>
         </div>
     </section>
 
-    <!-- SECCIÓN 03: GALERÍA DE ESPECIALIDADES -->
-    <section id="menu" class="galeria-seccion">
-        <div class="galeria-header">
-            <span class="font-script" style="font-size: 2.5rem; color: #b86b43;">Colección Dulce</span>
-            <h2 class="font-serif" style="font-size: 2.4rem;">Nuestras Especialidades</h2>
-        </div>
-        
-        <div class="grid-pasteles">
-            
-            <div class="pastel-item">
-                <div class="img-box">
-                    <img src="pasteles/dssd.jpeg" alt="Kuchen dorada artesanal">
-                </div>
-                <div class="detalles-box">
-                    <h3 class="font-serif">Tartas & Kuchens</h3>
-                    <p>Crocante dorado, textura suave y horneado lento para resaltar la fruta natural.</p>
-                </div>
-            </div>
+    <div class="faq-link-container">
+        <a href="faq.html" class="btn-faq">Ver Preguntas Frecuentes (FAQ) ➔</a>
+    </div>
 
-            <div class="pastel-item">
-                <div class="img-box">
-                    <img src="pasteles/pasteles.jpeg" alt="Torta de cumpleaños de crema con manjar">
-                </div>
-                <div class="detalles-box">
-                    <h3 class="font-serif">Torta de Cumpleaños</h3>
-                    <p>Diseño clásico con abundante manjar artesanal y cobertura de crema suave.</p>
-                </div>
-            </div>
-
-            <div class="pastel-item">
-                <div class="img-box">
-                    <img src="pasteles/pasteles2.jpeg" alt="Torta temática de anime">
-                </div>
-                <div class="detalles-box">
-                    <h3 class="font-serif">Torta Temática</h3>
-                    <p>Llevamos tus personajes favoritos al pastel con colores vivos y gran sabor.</p>
-                </div>
-            </div>
-
-            <div class="pastel-item">
-                <div class="img-box">
-                    <img src="pasteles/frutas.jpeg" alt="Torta de frutas frescas">
-                </div>
-                <div class="detalles-box">
-                    <h3 class="font-serif">Tarta de Frutas Frescas</h3>
-                    <p>Cargada de frutillas, kiwi y duraznos seleccionados sobre crema pastelera única.</p>
-                </div>
-            </div>
-
-            <div class="pastel-item">
-                <div class="img-box">
-                    <img src="pasteles/ssss.jpeg" alt="Torta elegante de matrimonio">
-                </div>
-                <div class="detalles-box">
-                    <h3 class="font-serif">Torta Eventos Especiales</h3>
-                    <p>Elegante diseño de varios pisos decorado con rosas finas para momentos inolvidables.</p>
-                </div>
-            </div>
-
-            <div class="pastel-item">
-                <div class="img-box">
-                    <img src="pasteles/rosa.jpeg" alt="Torta Rosa Vintage">
-                </div>
-                <div class="detalles-box">
-                    <h3 class="font-serif">Torta Rosa Vintage</h3>
-                    <p>Texturas de crema rosada con detalles en chocolate blanco y sabor tradicional.</p>
-                </div>
-            </div>
-
-            <div class="pastel-item destacado">
-                <div class="badge-precio">FAVORITO</div>
-                <div class="img-box">
-                    <img src="pasteles/caja.jpeg" alt="Caja de mini bocadillos y brownies">
-                </div>
-                <div class="detalles-box">
-                    <h3 class="font-serif">Caja de Dulces Variados</h3>
-                    <p>¡Nuestra estrella! Surtido irresistible de brownies, lemon pie en cubos y bocadillos para compartir.</p>
-                </div>
-            </div>
-
-            <div class="pastel-item">
-                <div class="img-box">
-                    <img src="pasteles/dorada.jpeg" alt="Torta Dorada de Aniversario">
-                </div>
-                <div class="detalles-box">
-                    <h3 class="font-serif">Torta Dorada Aniversario</h3>
-                    <p>Elegante cobertura en tonos cálidos con finos chorreos dorados y detalles delicados.</p>
-                </div>
-            </div>
-
-            <div class="pastel-item">
-                <div class="img-box">
-                    <img src="pasteles/futbolera.jpeg" alt="Torta temática pelota de fútbol">
-                </div>
-                <div class="detalles-box">
-                    <h3 class="font-serif">Torta Futbolera</h3>
-                    <p>Diseño personalizado en crema decorado para los amantes del deporte.</p>
-                </div>
-            </div>
-
-            <div class="pastel-item">
-                <div class="img-box">
-                    <img src="pasteles/frambuesa.jpeg" alt="Cheesecake de frambuesa">
-                </div>
-                <div class="detalles-box">
-                    <h3 class="font-serif">Cheesecake de Frambuesa</h3>
-                    <p>Textura cremosa horneada con salsa artesanal de frutos rojos.</p>
-                </div>
-            </div>
-
-            <div class="pastel-item">
-                <div class="img-box">
-                    <img src="pasteles/arandanos.jpeg" alt="Cheesecake de arándanos">
-                </div>
-                <div class="detalles-box">
-                    <h3 class="font-serif">Cheesecake de Arándanos</h3>
-                    <p>El equilibrio perfecto entre queso crema suave y arándanos frescos.</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- SECCIÓN 04: PREGUNTAS FRECUENTES (AUTOMATIZADAS Y INTEGRADAS) -->
-    <section id="faq" class="seccion-faq">
-        <div class="faq-header">
-            <span class="font-script" style="font-size: 2.5rem; color: #b86b43;">Resolvemos tus dudas</span>
-            <h2 class="font-serif" style="font-size: 2.2rem;">Preguntas Frecuentes</h2>
-        </div>
-
-        <details>
-            <summary>¿Hacen repostería sin gluten o sin lactosa?</summary>
-            <p>Sí, pero no tenemos carta fija. Como trabajamos con ingredientes frescos, la disponibilidad cambia cada semana. Si necesitas un pedido especial sin gluten, avísanos con anticipación y adaptamos nuestra receta para ti.</p>
-        </details>
-
-        <details>
-            <summary>¿Cómo hago un pedido para un cumpleaños o evento?</summary>
-            <p>Ponte en contacto con nosotros indicando la fecha y el número de personas. Te enviamos una propuesta rápidamente. Para eventos grandes solicitamos un margen de días (la masa madre no se negocia).</p>
-        </details>
-
-        <details>
-            <summary>¿Hacen envíos a domicilio?</summary>
-            <p>Repartimos en zonas cercanas a nuestra ubicación física en franja matutina. También contamos con la opción de retiro presencial directo en tienda.</p>
-        </details>
-
-        <details>
-            <summary>¿Puedo encargar una tarta personalizada?</summary>
-            <p>Por supuesto. Elegimos el diseño, el relleno y la cobertura juntos según la complejidad de tus ideas. Escríbenos con tus propuestas.</p>
-        </details>
-    </section>
-
-    <!-- FOOTER EDITORIAL -->
     <footer>
-        <img src="Fondo.pngvv.png" alt="Logo Luna de Almendra" class="logo-footer">
-        <p>&copy; 2026 Luna de Almendra | Pastelería Artesanal</p>
+        <p>&copy; 2026 Luna de Almendra. Todos los derechos reservados.</p>
     </footer>
 
 </body>
