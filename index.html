@@ -18,8 +18,12 @@
             font-family: 'Poppins', sans-serif;
             color: #4a382c;
             line-height: 1.6;
-            background: url('pasteleria.jpeg') no-repeat center center fixed;
+            background-image: url('pasteleria.jpeg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             background-size: cover;
+            background-color: #f7eee5;
         }
 
         h1, h2, h3 {
@@ -28,19 +32,19 @@
             color: #4a2e1b;
         }
 
-        /* --- Header / Hero Integrado --- */
+        /* --- Header / Hero --- */
         .hero {
             text-align: center;
-            padding: 60px 20px;
-            background: rgba(255, 247, 240, 0.88);
-            backdrop-filter: blur(5px);
-            border-bottom: 2px dashed #d9bba0;
+            padding: 50px 20px;
+            background: rgba(255, 247, 240, 0.60);
+            backdrop-filter: blur(4px);
+            border-bottom: 2px dashed rgba(217, 187, 160, 0.8);
         }
 
         .logo-contenedor {
             display: inline-block;
             position: relative;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             padding: 5px;
             border-radius: 50%;
             transition: transform 0.3s ease;
@@ -51,19 +55,20 @@
         }
 
         .logo-img {
-            max-width: 320px;
+            max-width: 300px;
             width: 100%;
             height: auto;
             display: block;
             border-radius: 50%;
-            filter: drop-shadow(0 15px 25px rgba(74, 46, 27, 0.2));
+            filter: drop-shadow(0 12px 25px rgba(74, 46, 27, 0.3));
         }
 
         .hero p {
             font-size: 1.25rem;
-            color: #8c5a38;
-            margin-bottom: 30px;
-            font-weight: 500;
+            color: #4a2e1b;
+            margin-bottom: 25px;
+            font-weight: 600;
+            text-shadow: 0 1px 3px rgba(255,255,255,0.9);
         }
 
         .btn {
@@ -78,22 +83,22 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: all 0.3s ease;
-            box-shadow: 0 6px 20px rgba(216, 125, 74, 0.3);
+            box-shadow: 0 6px 20px rgba(216, 125, 74, 0.4);
         }
 
         .btn:hover {
             background-color: #bf6635;
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(216, 125, 74, 0.4);
+            box-shadow: 0 10px 25px rgba(216, 125, 74, 0.5);
         }
 
         /* --- Historia --- */
         .historia {
             max-width: 900px;
-            margin: 60px auto;
+            margin: 50px auto;
             padding: 40px 30px;
-            background-color: rgba(255, 255, 255, 0.92);
-            backdrop-filter: blur(4px);
+            background-color: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(6px);
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(74, 46, 27, 0.15);
             text-align: center;
@@ -120,27 +125,27 @@
 
         .historia p {
             font-size: 1.1rem;
-            color: #665042;
+            color: #4a382c;
             margin-bottom: 15px;
-            font-weight: 400;
+            font-weight: 500;
         }
 
         .resaltado {
             color: #d87d4a;
-            font-weight: 600;
+            font-weight: 700;
         }
 
-        /* --- Sección Video Clickeable --- */
+        /* --- Sección Video --- */
         .video-seccion {
-            background-color: rgba(239, 226, 213, 0.88);
-            backdrop-filter: blur(4px);
-            padding: 60px 20px;
+            background-color: rgba(239, 226, 213, 0.75);
+            backdrop-filter: blur(5px);
+            padding: 50px 20px;
             text-align: center;
         }
 
         .video-link {
             display: block;
-            max-width: 480px;
+            max-width: 460px;
             margin: 0 auto;
             text-decoration: none;
             cursor: pointer;
@@ -155,7 +160,7 @@
             background-color: #ffffff;
             padding: 15px;
             border-radius: 18px;
-            box-shadow: 0 12px 35px rgba(74, 46, 27, 0.15);
+            box-shadow: 0 12px 35px rgba(74, 46, 27, 0.2);
             border: 1px solid #ebd2be;
         }
 
@@ -176,11 +181,11 @@
         /* --- Galería --- */
         .galeria-seccion {
             max-width: 1200px;
-            margin: 70px auto;
-            padding: 30px 20px;
+            margin: 60px auto;
+            padding: 40px 20px;
             text-align: center;
-            background-color: rgba(247, 238, 229, 0.85);
-            backdrop-filter: blur(4px);
+            background-color: rgba(247, 238, 229, 0.82);
+            backdrop-filter: blur(6px);
             border-radius: 24px;
         }
 
@@ -191,7 +196,7 @@
 
         .grid-pasteles {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
 
@@ -199,7 +204,7 @@
             background: #ffffff;
             border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 8px 20px rgba(74, 46, 27, 0.1);
+            box-shadow: 0 8px 20px rgba(74, 46, 27, 0.12);
             border: 1px solid #ebd2be;
             transition: transform 0.3s ease;
             position: relative;
@@ -220,18 +225,18 @@
             right: 15px;
             background: #4a2e1b;
             color: #ffffff;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 700;
-            padding: 8px 18px;
+            padding: 8px 16px;
             border-radius: 30px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
             border: 2px solid #fff;
             z-index: 10;
         }
 
         .img-box {
             width: 100%;
-            height: 320px;
+            height: 300px;
             overflow: hidden;
         }
 
@@ -242,12 +247,12 @@
         }
 
         .detalles-box {
-            padding: 25px;
+            padding: 22px;
             text-align: left;
         }
 
         .detalles-box h3 {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             margin-bottom: 8px;
         }
 
@@ -262,14 +267,13 @@
             background-color: #4a2e1b;
             color: #f7eee5;
             text-align: center;
-            padding: 50px 20px;
-            margin-top: 80px;
+            padding: 40px 20px;
+            margin-top: 60px;
         }
 
         footer p {
             font-size: 0.95rem;
             opacity: 0.9;
-            margin-bottom: 8px;
         }
 
         .amor {
@@ -293,7 +297,6 @@
         <p>Cada una de nuestras creaciones nace de recetas hechas desde cero, con paciencia, sabor casero y el cariño de una preparación artesanal.</p>
     </section>
 
-    <!-- Video Clickeable que lleva a faq.html -->
     <section class="video-seccion">
         <a href="faq.html" class="video-link" title="Haz clic para ver las Preguntas Frecuentes">
             <div class="video-contenedor">
@@ -306,7 +309,6 @@
         </a>
     </section>
 
-    <!-- Galería con imágenes en la carpeta pasteles/ -->
     <section class="galeria-seccion">
         <h2>Nuestras Especialidades</h2>
         
@@ -372,7 +374,6 @@
                 </div>
             </div>
 
-            <!-- PRODUCTO DESTACADO ($16.000) -->
             <div class="pastel-item destacado">
                 <div class="badge-precio">$16.000 CLP</div>
                 <div class="img-box">
