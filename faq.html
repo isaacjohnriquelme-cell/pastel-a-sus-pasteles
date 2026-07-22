@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dudas Rápidas | Luna de Almendra</title>
+    <title>Preguntas Frecuentes | Luna de Almendra</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -16,205 +16,190 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #fcf8f2;
-            color: #4a3e3d;
+            color: #4a382c;
             line-height: 1.6;
+            background: url('pasteleria.jpeg') no-repeat center center fixed;
+            background-size: cover;
         }
 
-        .header-faq {
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: #4a2e1b;
+        }
+
+        /* --- Header / Hero --- */
+        .hero-faq {
             text-align: center;
             padding: 50px 20px 30px;
-            background-color: #ffffff;
-            border-bottom: 2px dashed #e8d0bd;
+            background: rgba(255, 247, 240, 0.88);
+            backdrop-filter: blur(5px);
+            border-bottom: 2px dashed #d9bba0;
+        }
+
+        .logo-contenedor {
+            display: inline-block;
+            position: relative;
+            margin-bottom: 20px;
+            padding: 5px;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-contenedor:hover {
+            transform: scale(1.04) rotate(-1deg);
         }
 
         .logo-img {
-            max-width: 180px;
+            max-width: 220px;
             width: 100%;
             height: auto;
-            margin-bottom: 15px;
-            border-radius: 12px;
+            display: block;
+            border-radius: 50%;
+            filter: drop-shadow(0 12px 20px rgba(74, 46, 27, 0.2));
         }
 
-        .header-faq h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.2rem;
-            color: #6b4423;
-            margin-bottom: 8px;
+        .hero-faq h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
         }
 
-        .header-faq p {
-            font-size: 1.05rem;
-            color: #a06c3f;
+        .hero-faq p {
+            font-size: 1.1rem;
+            color: #8c5a38;
             font-weight: 500;
         }
 
-        .btn-volver {
-            display: inline-block;
-            margin-top: 20px;
-            background-color: #6b4423;
-            color: #ffffff;
-            padding: 10px 24px;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: all 0.2s ease;
-        }
-
-        .btn-volver:hover {
-            background-color: #523318;
-            transform: translateY(-2px);
-        }
-
-        .faq-contenedor {
-            max-width: 750px;
-            margin: 40px auto;
+        /* --- Botón Volver --- */
+        .contenedor-volver {
+            max-width: 800px;
+            margin: 30px auto 0;
             padding: 0 20px;
         }
 
-        /* --- Acordeones limpios --- */
-        details {
-            background: #ffffff;
-            margin-bottom: 15px;
-            padding: 18px 22px;
-            border-radius: 12px;
-            border: 1px solid #e8d0bd;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        details:hover {
-            border-color: #d49a6a;
-        }
-
-        summary {
-            font-weight: 600;
-            color: #6b4423;
-            font-size: 1.1rem;
-            outline: none;
-            list-style: none; /* Oculta la flecha por defecto */
-            display: flex;
-            justify-content: space-between;
+        .btn-volver {
+            display: inline-flex;
             align-items: center;
-        }
-
-        summary::-webkit-details-marker {
-            display: none;
-        }
-
-        summary::after {
-            content: '＋';
-            font-size: 1.2rem;
-            color: #d49a6a;
-            font-weight: bold;
-        }
-
-        details[open] summary::after {
-            content: '✕';
-            color: #6b4423;
-        }
-
-        details[open] summary {
-            margin-bottom: 12px;
-            border-bottom: 1px solid #f0e2d5;
-            padding-bottom: 8px;
-        }
-
-        details p {
-            font-size: 0.98rem;
-            color: #555;
-            font-weight: 300;
-        }
-
-        .caja-contacto {
-            background: #ffffff;
-            border: 2px solid #d49a6a;
-            border-radius: 15px;
-            padding: 25px;
-            text-align: center;
-            margin-top: 40px;
-        }
-
-        .caja-contacto h3 {
-            font-family: 'Playfair Display', serif;
-            color: #6b4423;
-            font-size: 1.4rem;
-            margin-bottom: 8px;
-        }
-
-        .btn-whatsapp {
-            display: inline-block;
-            margin-top: 15px;
-            background-color: #25d366;
-            color: white;
-            padding: 12px 28px;
-            border-radius: 50px;
-            font-weight: 700;
+            gap: 8px;
+            background-color: rgba(255, 255, 255, 0.95);
+            color: #4a2e1b;
+            padding: 10px 22px;
             text-decoration: none;
-            font-size: 1rem;
-            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border: 1px solid #ebd2be;
+            box-shadow: 0 4px 12px rgba(74, 46, 27, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .btn-volver:hover {
+            background-color: #d87d4a;
+            color: #ffffff;
+            border-color: #d87d4a;
+            transform: translateX(-4px);
+        }
+
+        /* --- Preguntas Frecuentes Container --- */
+        .faq-seccion {
+            max-width: 800px;
+            margin: 30px auto 60px;
+            padding: 0 20px;
+        }
+
+        .faq-item {
+            background-color: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(4px);
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 20px;
+            border: 1px solid #ebd2be;
+            box-shadow: 0 8px 20px rgba(74, 46, 27, 0.1);
             transition: transform 0.2s ease;
         }
 
-        .btn-whatsapp:hover {
-            transform: scale(1.04);
+        .faq-item:hover {
+            transform: translateY(-2px);
         }
 
+        .faq-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .faq-item p {
+            font-size: 1rem;
+            color: #665042;
+            font-weight: 400;
+        }
+
+        /* --- Footer --- */
         footer {
+            background-color: #4a2e1b;
+            color: #f7eee5;
             text-align: center;
-            padding: 30px 20px;
-            background-color: #6b4423;
-            color: #ffffff;
+            padding: 40px 20px;
             margin-top: 60px;
-            font-size: 0.9rem;
+        }
+
+        footer p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .amor {
+            color: #d87d4a;
         }
     </style>
 </head>
 <body>
 
-    <header class="header-faq">
-        <!-- Reemplaza por tu logo si lo tienes en la carpeta -->
-        <img src="logo.jpeg" alt="Luna de Almendra Logo" class="logo-img">
-        <h1>Resuelve tus dudas en 5 segundos</h1>
-        <p>Todo lo que necesitas saber antes de darte un gusto</p>
-        <a href="index.html" class="btn-volver">← Volver al inicio</a>
+    <header class="hero-faq">
+        <a href="index.html" class="logo-contenedor">
+            <img src="Fondo.pngvv.png" alt="Luna de Almendra Pastelería Artesanal" class="logo-img">
+        </a>
+        <h1>Preguntas Frecuentes</h1>
+        <p>Todo lo que necesitas saber antes de realizar tu encargo</p>
     </header>
 
-    <main class="faq-contenedor">
+    <div class="contenedor-volver">
+        <a href="index.html" class="btn-volver">← Volver al Inicio</a>
+    </div>
 
-        <details>
-            <summary>🍓 ¿Qué sabores y rellenos preparan?</summary>
-            <p>Trabajamos con manjar artesanal, crema pastelera casera, frutas frescas de temporada (frutillas, frambuesas, arándanos), chocolate de alta calidad y cheesecakes horneados. Si quieres combinar algo único, nos avisas y lo armamos.</p>
-        </details>
+    <main class="faq-seccion">
 
-        <details>
-            <summary>⏰ ¿Con cuánta anticipación debo encargar?</summary>
-            <p>Lo ideal es entre <strong>48 a 72 horas antes</strong>. Si es un pedido grande o tarta temática especial, avísanos con 1 semana de margen para asegurar tu cupo.</p>
-        </details>
+        <div class="faq-item">
+            <h3>🎂 ¿Con cuánto tiempo de anticipación debo hacer mi pedido?</h3>
+            <p>Recomendamos realizar tu pedido con al menos <strong>3 a 5 días de anticipación</strong> para tortas tradicionales, y con <strong>1 semana de anticipación</strong> para pedidos personalizados o eventos especiales.</p>
+        </div>
 
-        <details>
-            <summary>🎨 ¿Puedo pedir un diseño personalizado?</summary>
-            <p>¡Sí! Mándanos tu idea o foto (animes, deportes, flores, estilo vintage) por WhatsApp y coordinamos los detalles para dejarla idéntica.</p>
-        </details>
+        <div class="faq-item">
+            <h3>🛵 ¿Cuentan con servicio de despacho a domicilio?</h3>
+            <p>Sí, realizamos entregas a domicilio con costo adicional según la comuna. También puedes coordinar el retiro presencial en nuestro punto de entrega de forma gratuita.</p>
+        </div>
 
-        <details>
-            <summary>📦 ¿Cómo entregan los pedidos?</summary>
-            <p>Puedes retirar directamente en nuestro taller o solicitar despacho a domicilio. Enviamos todo en empaques firmes para que llegue perfecto a tu mesa.</p>
-        </details>
+        <div class="faq-item">
+            <h3>💳 ¿Cuáles son los medios de pago aceptados?</h3>
+            <p>Aceptamos transferencia bancaria directa y pagos con tarjeta de débito/crédito. Para confirmar tu pedido requerimos un abono del 50% y el saldo restante se cancela al momento de la entrega.</p>
+        </div>
 
-        <!-- Bloque rápido de ayuda directa -->
-        <div class="caja-contacto">
-            <h3>¿Tienes una pregunta diferente?</h3>
-            <p>Hablemos directamente y lo resolvemos en el momento.</p>
-            <a href="https://wa.me/TU_NUMERO_AQUI" class="btn-whatsapp">Escribir al WhatsApp →</a>
+        <div class="faq-item">
+            <h3>🎨 ¿Puedo personalizar el diseño o sabor de mi pastel?</h3>
+            <p>¡Por supuesto! Nos encanta crear diseños únicos. Puedes enviarnos tus referencias por WhatsApp y elegiremos juntos el bizcocho, rellenos y cobertura de tu preferencia.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>❄️ ¿Cómo debo conservar mi tarta o pastel?</h3>
+            <p>Nuestras creaciones son 100% artesanales y sin conservantes artificiales. Deben mantenerse refrigeradas entre 2°C y 5°C. Te sugerimos retirarla del frío 15-20 minutos antes de consumir para disfrutar al máximo sus texturas y sabores.</p>
         </div>
 
     </main>
 
     <footer>
-        <p>&copy; 2026 Luna de Almendra - Hecho con dedicación en cada detalle.</p>
+        <p>&copy; 2026 Luna de Almendra. Hecho con <span class="amor">❤</span> y dedicación artesanal.</p>
     </footer>
 
 </body>
